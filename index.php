@@ -39,7 +39,10 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">Selamat Datang di pojok atas</div>
+            <div class="masthead-subheading">
+                <img src="images/logo pojok.png" alt="" style="width: 30%; height: auto;">
+            </div>
+                <!-- <div class="masthead-subheading">Selamat Datang di pojok atas</div> -->
                 <!-- <div class="masthead-heading text-uppercase">It's Nice To Meet You</div> -->
                 <a class="btn btn-primary btn-xl text-uppercase" href="#services">Telusuri</a>
             </div>
