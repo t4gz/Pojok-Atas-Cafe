@@ -30,8 +30,9 @@
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#makanan">MAKANAN</a></li>
                         <li class="nav-item"><a class="nav-link" href="#minuman">MINUMAN</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#cemilan">CEMILAN</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="#team">Team</a></li> -->
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -62,7 +63,8 @@
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
                                 <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                    <!-- TANDA PLUS UNTUK MASUK KE HALAMAN LAIN (PENJELASAN PRODUK) -->
+                                    <!-- <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
                             </a>
@@ -78,7 +80,7 @@
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
                                 <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                    <!-- <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
                             </a>
@@ -94,7 +96,7 @@
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
                                 <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                    <!-- <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
                             </a>
@@ -110,7 +112,7 @@
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
                                 <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                    <!-- <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
                             </a>
@@ -126,7 +128,7 @@
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
                                 <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                    <!-- <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
                             </a>
@@ -142,7 +144,7 @@
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
                                 <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                    <!-- <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
                             </a>
@@ -257,6 +259,113 @@
                                 <div class="portfolio-caption-heading">Coffe Latte</div>
                                 <div class="portfolio-caption-subheading">Stok:</div>
                                 <div class="portfolio-caption-subheading">Rp20.000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Cemilan -->
+        <section class="page-section bg-light" id="cemilan">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">CEMILAN</h2>
+                    <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
+                </div>
+                <div class="row">
+                    <div class="col-6 col-sm-6 mb-4">
+                        <!-- Portfolio item 1-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Sosis</div>
+                                <div class="portfolio-caption-subheading">Stok:</div>
+                                <div class="portfolio-caption-subheading">Rp10.000</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-6 mb-4">
+                        <!-- Portfolio item 2-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Nugget</div>
+                                <div class="portfolio-caption-subheading">Stok:</div>
+                                <div class="portfolio-caption-subheading">Rp10.000</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-6 mb-4">
+                        <!-- Portfolio item 3-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Singkong Goreng</div>
+                                <div class="portfolio-caption-subheading">Stok:</div>
+                                <div class="portfolio-caption-subheading">Rp10.000</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-6 mb-4 mb-lg-0">
+                        <!-- Portfolio item 4-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Keripik Basreng</div>
+                                <div class="portfolio-caption-subheading">Stok:</div>
+                                <div class="portfolio-caption-subheading">Rp10.000</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-6 mb-4 mb-sm-0">
+                        <!-- Portfolio item 5-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Usus Crispy</div>
+                                <div class="portfolio-caption-subheading">Stok:</div>
+                                <div class="portfolio-caption-subheading">Rp10.000</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-6">
+                        <!-- Portfolio item 6-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Pisang Keju</div>
+                                <div class="portfolio-caption-subheading">Stok:</div>
+                                <div class="portfolio-caption-subheading">Rp15.000</div>
                             </div>
                         </div>
                     </div>
