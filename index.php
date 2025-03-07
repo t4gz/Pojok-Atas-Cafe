@@ -61,13 +61,17 @@
                     <div class="col-6 col-sm-6 mb-4">
                         <!-- Portfolio item 1-->
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <!-- <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1"> -->
                                 <div class="portfolio-hover">
                                     <!-- TANDA PLUS UNTUK MASUK KE HALAMAN LAIN (PENJELASAN PRODUK) -->
                                     <!-- <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
-                            </a>
+                                <div class="button-container" style="position: fixed;bottom: 47%;right: 54%;z-index: auto;">
+                                    <button type="button" class="btn btn-secondary">+</button>
+                                    <button type="button" class="btn btn-secondary">-</button>
+                                </div>
+                            <!-- </a> -->
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Nasi Goreng</div>
                                 <div class="portfolio-caption-subheading">Stok:</div>
@@ -78,12 +82,16 @@
                     <div class="col-6 col-sm-6 mb-4">
                         <!-- Portfolio item 2-->
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                            <!-- <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2"> -->
                                 <div class="portfolio-hover">
                                     <!-- <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
-                            </a>
+                                <div class="button-container">
+                                    <button type="button" class="btn btn-secondary">+</button>
+                                    <button type="button" class="btn btn-secondary">-</button>
+                                </div>
+                            <!-- </a> -->
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Mie Goreng</div>
                                 <div class="portfolio-caption-subheading">Stok:</div>
@@ -94,12 +102,16 @@
                     <div class="col-6 col-sm-6 mb-4">
                         <!-- Portfolio item 3-->
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                            <!-- <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3"> -->
                                 <div class="portfolio-hover">
                                     <!-- <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
-                            </a>
+                                <div class="button-container">
+                                    <button type="button" class="btn btn-secondary btn-md-x1">+</button>
+                                    <button type="button" class="btn btn-secondary">-</button>
+                                </div>
+                            <!-- </a> -->
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Soto</div>
                                 <div class="portfolio-caption-subheading">Stok:</div>
@@ -107,15 +119,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-sm-6 mb-4 mb-lg-0">
+                    <div class="col-6 col-sm-6 mb-4">
                         <!-- Portfolio item 4-->
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                            <!-- <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4"> -->
                                 <div class="portfolio-hover">
                                     <!-- <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
-                            </a>
+                                <div class="button-container">
+                                    <button type="button" class="btn btn-secondary">+</button>
+                                    <button type="button" class="btn btn-secondary">-</button>
+                                </div>
+                            <!-- </a> -->
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Ayam Geprek</div>
                                 <div class="portfolio-caption-subheading">Stok:</div>
@@ -123,15 +139,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-sm-6 mb-4 mb-sm-0">
+                    <div class="col-6 col-sm-6 mb-4">
                         <!-- Portfolio item 5-->
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                            <!-- <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5"> -->
                                 <div class="portfolio-hover">
                                     <!-- <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
-                            </a>
+                                <div class="button-container">
+                                    <button type="button" class="btn btn-secondary">+</button>
+                                    <button type="button" class="btn btn-secondary">-</button>
+                                </div>
+                            <!-- </a> -->
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Ayam Pecel</div>
                                 <div class="portfolio-caption-subheading">Stok:</div>
@@ -139,15 +159,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-sm-6">
+                    <div class="col-6 col-sm-6 mb-4">
                         <!-- Portfolio item 6-->
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                            <!-- <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6"> -->
                                 <div class="portfolio-hover">
                                     <!-- <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
-                            </a>
+                                <div class="button-container">
+                                    <button type="button" class="btn btn-secondary">+</button>
+                                    <button type="button" class="btn btn-secondary">-</button>
+                                </div>
+                            <!-- </a> -->
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Mie Ayam</div>
                                 <div class="portfolio-caption-subheading">Stok:</div>
@@ -169,12 +193,16 @@
                     <div class="col-6 col-sm-6 mb-4">
                         <!-- Portfolio item 1-->
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <!-- <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1"> -->
                                 <div class="portfolio-hover">
                                     <!-- <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
-                            </a>
+                                <div class="button-container">
+                                    <button type="button" class="btn btn-secondary">+</button>
+                                    <button type="button" class="btn btn-secondary">-</button>
+                                </div>
+                            <!-- </a> -->
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Es Teh</div>
                                 <div class="portfolio-caption-subheading">Stok:</div>
@@ -185,12 +213,16 @@
                     <div class="col-6 col-sm-6 mb-4">
                         <!-- Portfolio item 2-->
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                            <!-- <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2"> -->
                                 <div class="portfolio-hover">
                                     <!-- <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
-                            </a>
+                                <div class="button-container">
+                                    <button type="button" class="btn btn-secondary">+</button>
+                                    <button type="button" class="btn btn-secondary">-</button>
+                                </div>
+                            <!-- </a> -->
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Matcha</div>
                                 <div class="portfolio-caption-subheading">Stok:</div>
@@ -201,12 +233,16 @@
                     <div class="col-6 col-sm-6 mb-4">
                         <!-- Portfolio item 3-->
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                            <!-- <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3"> -->
                                 <div class="portfolio-hover">
                                     <!-- <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
-                            </a>
+                                <div class="button-container">
+                                    <button type="button" class="btn btn-secondary">+</button>
+                                    <button type="button" class="btn btn-secondary">-</button>
+                                </div>
+                            <!-- </a> -->
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Americano</div>
                                 <div class="portfolio-caption-subheading">Stok:</div>
@@ -214,15 +250,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-sm-6 mb-4 mb-lg-0">
+                    <div class="col-6 col-sm-6 mb-4">
                         <!-- Portfolio item 4-->
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                            <!-- <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4"> -->
                                 <div class="portfolio-hover">
                                     <!-- <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
-                            </a>
+                                <div class="button-container">
+                                    <button type="button" class="btn btn-secondary">+</button>
+                                    <button type="button" class="btn btn-secondary">-</button>
+                                </div>
+                            <!-- </a> -->
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Es Jeruk</div>
                                 <div class="portfolio-caption-subheading">Stok:</div>
@@ -230,15 +270,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-sm-6 mb-4 mb-sm-0">
+                    <div class="col-6 col-sm-6 mb-4">
                         <!-- Portfolio item 5-->
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                            <!-- <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5"> -->
                                 <div class="portfolio-hover">
                                     <!-- <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
-                            </a>
+                                <div class="button-container">
+                                    <button type="button" class="btn btn-secondary">+</button>
+                                    <button type="button" class="btn btn-secondary">-</button>
+                                </div>
+                            <!-- </a> -->
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Tea Thai</div>
                                 <div class="portfolio-caption-subheading">Stok:</div>
@@ -246,15 +290,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-sm-6">
+                    <div class="col-6 col-sm-6 mb-4">
                         <!-- Portfolio item 6-->
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                            <!-- <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6"> -->
                                 <div class="portfolio-hover">
                                     <!-- <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
-                            </a>
+                                <div class="button-container">
+                                    <button type="button" class="btn btn-secondary">+</button>
+                                    <button type="button" class="btn btn-secondary">-</button>
+                                </div>
+                            <!-- </a> -->
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Coffe Latte</div>
                                 <div class="portfolio-caption-subheading">Stok:</div>
@@ -276,12 +324,16 @@
                     <div class="col-6 col-sm-6 mb-4">
                         <!-- Portfolio item 1-->
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <!-- <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1"> -->
                                 <div class="portfolio-hover">
                                     <!-- <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
-                            </a>
+                                <div class="button-container">
+                                    <button type="button" class="btn btn-secondary">+</button>
+                                    <button type="button" class="btn btn-secondary">-</button>
+                                </div>
+                            <!-- </a> -->
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Sosis</div>
                                 <div class="portfolio-caption-subheading">Stok:</div>
@@ -292,12 +344,16 @@
                     <div class="col-6 col-sm-6 mb-4">
                         <!-- Portfolio item 2-->
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                            <!-- <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2"> -->
                                 <div class="portfolio-hover">
                                     <!-- <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
-                            </a>
+                                <div class="button-container">
+                                    <button type="button" class="btn btn-secondary">+</button>
+                                    <button type="button" class="btn btn-secondary">-</button>
+                                </div>
+                            <!-- </a> -->
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Nugget</div>
                                 <div class="portfolio-caption-subheading">Stok:</div>
@@ -308,12 +364,16 @@
                     <div class="col-6 col-sm-6 mb-4">
                         <!-- Portfolio item 3-->
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                            <!-- <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3"> -->
                                 <div class="portfolio-hover">
                                     <!-- <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
-                            </a>
+                                <div class="button-container">
+                                    <button type="button" class="btn btn-secondary">+</button>
+                                    <button type="button" class="btn btn-secondary">-</button>
+                                </div>
+                            <!-- </a> -->
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Singkong Goreng</div>
                                 <div class="portfolio-caption-subheading">Stok:</div>
@@ -321,15 +381,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-sm-6 mb-4 mb-lg-0">
+                    <div class="col-6 col-sm-6 mb-4">
                         <!-- Portfolio item 4-->
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                            <!-- <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4"> -->
                                 <div class="portfolio-hover">
                                     <!-- <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
-                            </a>
+                                <div class="button-container">
+                                    <button type="button" class="btn btn-secondary">+</button>
+                                    <button type="button" class="btn btn-secondary">-</button>
+                                </div>
+                            <!-- </a> -->
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Keripik Basreng</div>
                                 <div class="portfolio-caption-subheading">Stok:</div>
@@ -337,15 +401,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-sm-6 mb-4 mb-sm-0">
+                    <div class="col-6 col-sm-6 mb-4">
                         <!-- Portfolio item 5-->
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                            <!-- <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5"> -->
                                 <div class="portfolio-hover">
                                     <!-- <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
-                            </a>
+                                <div class="button-container">
+                                    <button type="button" class="btn btn-secondary">+</button>
+                                    <button type="button" class="btn btn-secondary">-</button>
+                                </div>
+                            <!-- </a> -->
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Usus Crispy</div>
                                 <div class="portfolio-caption-subheading">Stok:</div>
@@ -353,15 +421,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-sm-6">
+                    <div class="col-6 col-sm-6 mb-4">
                         <!-- Portfolio item 6-->
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                            <!-- <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6"> -->
                                 <div class="portfolio-hover">
                                     <!-- <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div> -->
                                 </div>
                                 <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
-                            </a>
+                                <div class="button-container">
+                                    <button type="button" class="btn btn-secondary">+</button>
+                                    <button type="button" class="btn btn-secondary">-</button>
+                                </div>
+                            <!-- </a> -->
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Pisang Keju</div>
                                 <div class="portfolio-caption-subheading">Stok:</div>
