@@ -113,7 +113,7 @@ $cemilan = getAllCemilan("SELECT * FROM cemilan");
                 </div>
             <?php endforeach; ?>
         </section>
-
+    
         <!-- About-->
         <section class="page-section" id="about">
             <div class="container">
@@ -161,6 +161,7 @@ $cemilan = getAllCemilan("SELECT * FROM cemilan");
                                 </div>
                                 <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
                             </div>
+<<<<<<< HEAD
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
