@@ -1,0 +1,21 @@
+Here is the plan for ensuring changes are pushed to the remote branch `ramdan_a1` in Git:
+
+1. **Check Current Branch**:
+   - Run the command: `git branch` to confirm you are on the `ramdan_a1` branch.
+
+2. **Make Changes**:
+   - Ensure you have made some changes to files in your repository. You can add a new file or modify an existing one.
+
+3. **Stage Changes**:
+   - Stage your changes using: `git add .` to include all modified files.
+
+4. **Commit Changes**:
+   - Commit the changes with: `git commit -m "Your commit message"` to save your changes to the local branch.
+
+5. **Push Changes to Remote**:
+   - Now push the changes to the remote repository using: `git push origin ramdan_a1`.
+
+6. **Verify Changes on GitHub**:
+   - Check the GitHub repository to confirm that the changes have been reflected.
+
+This plan will help ensure that you can successfully push changes to the remote branch `ramdan_a1`.
