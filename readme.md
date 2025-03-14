@@ -6,5 +6,3 @@
     3. menambah koneksi.php di folder php (baru).
     --
     4. koneksi,login,admin_dashboard
-
-
