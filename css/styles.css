@@ -11368,7 +11368,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 /* KERANJANG */
 .iconkeranjang{
   position: fixed;
-  bottom:50px;
+  bottom:55px;
   right:25px;
   z-index:1000;
 }
