@@ -1,0 +1,42 @@
+
+.menu-item img {
+    width: 60%; /* Mengurangi ukuran gambar menjadi 60% dari container di layar besar */
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+  }
+  .btn .btn-add {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 128, 0, 1);
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .card {
+    height: 100%;
+  }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (max-width: 576px) {
+    .btn-add {
+        width: 25px;
+        height: 25px;
+        font-size: 14px;
+    }
+    .menu-item img {
+        width: 50%; /* Lebih kecil untuk tampilan mobile */
+    }
+  }

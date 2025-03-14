@@ -15,6 +15,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/plus.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -53,6 +54,16 @@
 
 
 <body>
+    <!-- KERANJANG -->
+    <div class="iconkeranjang">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="red" class="bi bi-basket2-fill" viewBox="0 0 16 16">
+            <a href=""></a>
+        <path d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1"/>
+        </svg>
+    </div>
+
+
+
     <section class="container mt-4" id="makanan">
         <h1 class="text-center">MAKANAN</h1>
         <div class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 g-5" id="menu-makanan">
@@ -75,35 +86,35 @@
     </section>
 
     <script>
-        // // DATA MAKANAN
-        // const makananItems = [
-        //     { id: 1, name: "", price: , stok: , image: "" },
-        //     { id: 2, name: "", price: , stok: , image: "" },
-        //     { id: 3, name: "", price: , stok: , image: "" },
-        //     { id: 4, name: "", price: , stok: , image: "" },
-        //     { id: 5, name: "", price: , stok: , image: "" },
-        //     { id: 6, name: "", price: , stok: , image: "" }
-        // ];
+        // DATA MAKANAN
+        const makananItems = [
+            { id: 1, name: "Nasi Goreng", price: 15000, stok:2, image: "nasi.jpg" },
+            { id: 2, name: "Mie Goreng", price: 15000, stok:7, image: "basreng.jpg" },
+            { id: 3, name: "Ayam Geprek", price: 15000, stok:9, image: "basreng.jpg" },
+            { id: 4, name: "Ayam Bakar", price: 20000, stok:4, image: "basreng.jpg" },
+            { id: 5, name: "Matcha Latte", price: 25000, stok:5, image: "basreng.jpg" },
+            { id: 6, name: "Matcha Latte", price: 25000, stok:5, image: "basreng.jpg" }
+        ];
 
-        // // DATA MINUMAN
-        // const minumanItems = [
-        //     { id: 1, name: "", price: , stok: , image: "" },
-        //     { id: 2, name: "", price: , stok: , image: "" },
-        //     { id: 3, name: "", price: , stok: , image: "" },
-        //     { id: 4, name: "", price: , stok: , image: "" },
-        //     { id: 5, name: "", price: , stok: , image: "" },
-        //     { id: 6, name: "", price: , stok: , image: "" }
-        // ];
+        // DATA MINUMAN
+        const minumanItems = [
+            { id: 1, name: "Nasi Goreng", price: 15000, stok:2, image: "nasi.jpg" },
+            { id: 2, name: "Mie Goreng", price: 15000, stok:7, image: "basreng.jpg" },
+            { id: 3, name: "Ayam Geprek", price: 15000, stok:9, image: "basreng.jpg" },
+            { id: 4, name: "Ayam Bakar", price: 20000, stok:4, image: "basreng.jpg" },
+            { id: 5, name: "Matcha Latte", price: 25000, stok:5, image: "basreng.jpg" },
+            { id: 6, name: "Matcha Latte", price: 25000, stok:5, image: "basreng.jpg" }
+        ];
 
-        // // DATA CEMILAN
-        // const cemilanItems = [
-        //     { id: 1, name: "", price: , stok: , image: "" },
-        //     { id: 2, name: "", price: , stok: , image: "" },
-        //     { id: 3, name: "", price: , stok: , image: "" },
-        //     { id: 4, name: "", price: , stok: , image: "" },
-        //     { id: 5, name: "", price: , stok: , image: "" },
-        //     { id: 6, name: "", price: , stok: , image: "" }
-        // ];
+        // DATA CEMILAN
+        const cemilanItems = [
+            { id: 1, name: "Nasi Goreng", price: 15000, stok:2, image: "nasi.jpg" },
+            { id: 2, name: "Mie Goreng", price: 15000, stok:7, image: "basreng.jpg" },
+            { id: 3, name: "Ayam Geprek", price: 15000, stok:9, image: "basreng.jpg" },
+            { id: 4, name: "Ayam Bakar", price: 20000, stok:4, image: "basreng.jpg" },
+            { id: 5, name: "Matcha Latte", price: 25000, stok:5, image: "basreng.jpg" },
+            { id: 6, name: "Matcha Latte", price: 25000, stok:5, image: "basreng.jpg" }
+        ];
 
 
         // MENU MAKANAN
