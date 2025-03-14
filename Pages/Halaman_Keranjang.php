@@ -27,7 +27,7 @@
                 <div>
                     <h5 class="mb-1">Nasi Goreng</h5>
                     <p class="mb-0">Stok: 2</p>
-                    <p class="mb-0">Harga: Rp20.000</p>
+                    <p class="mb-0" style="color:red;">Harga: Rp20.000</p>
                 </div>
             </div>
             <div class="quantity-container">
@@ -43,7 +43,7 @@
                 <div>
                     <h5 class="mb-1">Matcha Latte</h5>
                     <p class="mb-0">Stok: 6</p>
-                    <p class="mb-0">Harga: Rp25.000</p>
+                    <p class="mb-0" style="color: red;">Harga: Rp25.000</p>
                 </div>
             </div>
             <div class="quantity-container">
@@ -58,7 +58,7 @@
         <div class="row">
             <div class="col-sm-6 text-start">
                 <div class="total" style="padding-left: 5%;">
-                    Total: Rp90.000
+                    Total: Rp0
                 </div>
             </div>
             <div class="col-sm-6 text-end">
