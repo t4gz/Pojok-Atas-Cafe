@@ -1,5 +1,5 @@
 .container1 {
-    display: fixed;
+    display: flex;
     flex-direction: column; 
     height: 100vh; 
 }
@@ -11,7 +11,6 @@
 }
 
 .item-card {
-    /* border: 1px solid #ddd;  */
     border-radius: 5px; 
     margin-bottom: 10px; 
     padding: 10px;
@@ -20,11 +19,12 @@
 .quantity-container {
     display: flex;
     align-items: center;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: none; /* Hilangkan bayangan jika tidak diperlukan */
 }
+
 .quantity-btn {
     width: 40px;
     height: 40px;
@@ -34,19 +34,21 @@
     cursor: pointer;
     background-color: #f8f9fa;
     border: none;
-    border-radius: 20px; /* Rounded edges */
+    border-radius: 20px; 
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s;
 }
+
 .quantity-btn:hover {
-    background-color: #e2e6ea; /* Change color on hover */
+    background-color: #e2e6ea;
 }
+
 .quantity-input {
     width: 50px;
     text-align: center;
     border: none;
     outline: none;
     background-color: #fff;
-    padding: 5px 0;
-    border-radius: 0; /* No rounding on input */
+    padding: 0; /* Hilangkan padding */
+    border-radius: 0; 
 }
