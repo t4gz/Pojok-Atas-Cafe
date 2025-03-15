@@ -17,35 +17,44 @@
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/plus.css" rel="stylesheet" />
     </head>
+
     <body id="page-top">
-        <!-- Navigation-->
+
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand" href="#page-top"><img src="images/icon_pjk.svg" alt="..." /></a>
+
+                <!-- TOMBOL MENU -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
                 </button>
+
+                <!-- ISI DI TOMBOL MENU -->
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#makanan">MAKANAN</a></li>
                         <li class="nav-item"><a class="nav-link" href="#minuman">MINUMAN</a></li>
                         <li class="nav-item"><a class="nav-link" href="#cemilan">CEMILAN</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    
+
                     </ul>
                 </div>
             </div>
         </nav>
-        <!-- Masthead-->
+        
+        <!-- BACKROUND DAN LOGO -->
         <header class="masthead">
             <div class="container">
             <div class="masthead-subheading">
             <div class="masthead-logo">
                 <img src="images/logo pojok.png" alt="" style="width: 20%; height: auto;">
             </div>
+                <!-- KALIMAT DIBAWAH LOGO -->
                 <!-- <div class="masthead-subheading">Selamat Datang di pojok atas</div> -->
                 <!-- <div class="masthead-heading text-uppercase">It's Nice To Meet You</div> -->
+
+                <!-- TOMBOL TELUSURI -->
                 <a class="btn btn-primary btn-md-xl text-uppercase" href="#makanan">Telusuri</a>
             </div>
         </header>
@@ -54,7 +63,7 @@
 
 
 <body>
-    <!-- KERANJANG -->
+    <!-- ICON KERANJANG -->
     <div class="iconkeranjang">
         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="red" class="bi bi-basket2-fill" viewBox="0 0 16 16">
             <a href=""></a>
@@ -62,8 +71,7 @@
         </svg>
     </div>
 
-
-
+    <!-- HEADER MAKANAN -->
     <section class="container mt-4" id="makanan">
         <h1 class="text-center">MAKANAN</h1>
         <div class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 g-5" id="menu-makanan">
@@ -71,6 +79,7 @@
         </div>
     </section>
 
+    <!-- HEADER MINUMAN -->
     <section class="container mt-4" id="minuman">
         <h1 class="text-center">MINUMAN</h1>
         <div class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 g-5" id="menu-minuman">
@@ -78,8 +87,9 @@
         </div>
     </section>
 
+    <!-- HEADER SNACK -->
     <section class="container mt-4" id="cemilan">
-        <h1 class="text-center">CEMILAN</h1>
+        <h1 class="text-center">SNACK</h1>
         <div class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 g-5" id="menu-cemilan">
             <!-- Menu akan di-generate oleh JavaScript -->
         </div>
@@ -88,36 +98,36 @@
     <script>
         // DATA MAKANAN
         const makananItems = [
-            { id: 1, name: "Nasi Goreng", price: 15000, stok:2, image: "nasi.jpg" },
-            { id: 2, name: "Mie Goreng", price: 15000, stok:7, image: "basreng.jpg" },
-            { id: 3, name: "Ayam Geprek", price: 15000, stok:9, image: "basreng.jpg" },
-            { id: 4, name: "Ayam Bakar", price: 20000, stok:4, image: "basreng.jpg" },
-            { id: 5, name: "Matcha Latte", price: 25000, stok:5, image: "basreng.jpg" },
-            { id: 6, name: "Matcha Latte", price: 25000, stok:5, image: "basreng.jpg" }
+            { id: 1, name: "", price: , stok: , image: "" },
+            { id: 2, name: "", price: , stok: , image: "" },
+            { id: 3, name: "", price: , stok: , image: "" },
+            { id: 4, name: "", price: , stok: , image: "" },
+            { id: 5, name: "", price: , stok: , image: "" },
+            { id: 6, name: "", price: , stok: , image: "" }
         ];
 
         // DATA MINUMAN
         const minumanItems = [
-            { id: 1, name: "Nasi Goreng", price: 15000, stok:2, image: "nasi.jpg" },
-            { id: 2, name: "Mie Goreng", price: 15000, stok:7, image: "basreng.jpg" },
-            { id: 3, name: "Ayam Geprek", price: 15000, stok:9, image: "basreng.jpg" },
-            { id: 4, name: "Ayam Bakar", price: 20000, stok:4, image: "basreng.jpg" },
-            { id: 5, name: "Matcha Latte", price: 25000, stok:5, image: "basreng.jpg" },
-            { id: 6, name: "Matcha Latte", price: 25000, stok:5, image: "basreng.jpg" }
+            { id: 1, name: "", price: , stok: , image: "" },
+            { id: 2, name: "", price: , stok: , image: "" },
+            { id: 3, name: "", price: , stok: , image: "" },
+            { id: 4, name: "", price: , stok: , image: "" },
+            { id: 5, name: "", price: , stok: , image: "" },
+            { id: 6, name: "", price: , stok: , image: "" }
         ];
 
-        // DATA CEMILAN
-        const cemilanItems = [
-            { id: 1, name: "Nasi Goreng", price: 15000, stok:2, image: "nasi.jpg" },
-            { id: 2, name: "Mie Goreng", price: 15000, stok:7, image: "basreng.jpg" },
-            { id: 3, name: "Ayam Geprek", price: 15000, stok:9, image: "basreng.jpg" },
-            { id: 4, name: "Ayam Bakar", price: 20000, stok:4, image: "basreng.jpg" },
-            { id: 5, name: "Matcha Latte", price: 25000, stok:5, image: "basreng.jpg" },
-            { id: 6, name: "Matcha Latte", price: 25000, stok:5, image: "basreng.jpg" }
+        // DATA SNACK
+        const snackItems = [
+            { id: 1, name: "", price: , stok: , image: "" },
+            { id: 2, name: "", price: , stok: , image: "" },
+            { id: 3, name: "", price: , stok: , image: "" },
+            { id: 4, name: "", price: , stok: , image: "" },
+            { id: 5, name: "", price: , stok: , image: "" },
+            { id: 6, name: "", price: , stok: , image: "" }
         ];
 
 
-        // MENU MAKANAN
+        // MENAMPILKAN MENU MAKANAN
         function renderMenuMakanan() {
             let menuList = document.getElementById("menu-makanan");
             menuList.innerHTML = "";
@@ -142,7 +152,7 @@
         renderMenuMakanan();
 
 
-        // MENU MINUMAN
+        // MENAMPILKAN MENU MINUMAN
         function renderMenuMinuman() {
             let menuList = document.getElementById("menu-minuman");
             menuList.innerHTML = "";
@@ -167,11 +177,11 @@
         renderMenuMinuman();
 
 
-        // MENU CEMILAN
-        function renderMenuCemilan() {
-            let menuList = document.getElementById("menu-cemilan");
+        // MENAMPILKAN MENU SNACK
+        function renderMenuSnack() {
+            let menuList = document.getElementById("menu-snack");
             menuList.innerHTML = "";
-            cemilanItems.forEach(item => {
+            snackItems.forEach(item => {
                 menuList.innerHTML += `
                     <div class="col">
                         <div class="card p-3 text-center menu-item">
