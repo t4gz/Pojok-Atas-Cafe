@@ -4,10 +4,14 @@
   $password = "";
   $database = "pojokatas";
 
-  $kon = mysqli_connect($servername, $username, $password, $database);
+  $konek = mysqli_connect($servername, $username, $password, $database);
 
-  if (!$kon) {
+  if (!$konek) {
     die("Connection failed: " . mysqli_connect_error());
   }
+  
+  // else{
+  //   echo "konek cuyh";
+  // }
   
 ?> 

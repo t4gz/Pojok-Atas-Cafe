@@ -15,9 +15,9 @@
     <meta name="author" content="">
     <link href="../css/tsany.css" rel="stylesheet" type="text/css">
 
-    <title>Dashboard Admin</title>
+    <title>Pengaturan Data</title>
 
-    <style>
+    <!-- <style>
         .blackbg{
             background-color: #000;
         }
@@ -27,7 +27,7 @@
         .darkf{
             color: #333;
         }
-    </style>
+    </style> -->
 
     <!-- Custom fonts for this template-->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -60,7 +60,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item ">
-                <a class="nav-link" href="Admin_dashboard.php">
+                <a class="nav-link" href="Admin_Dashboard.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -178,8 +178,8 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <div class="">
-                        <h1 class="h4 mb-0 darkf">Administrator Panel</h1>    
+                    <div class="d-flex">
+                        <h1 class="h4 mb-0 darkf">Data Minuman</h1>    
                     </div>
 
                     <!-- Topbar Search -->
@@ -242,7 +242,7 @@
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">USERNAME HERE</span>
                                 <!-- <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg"> -->
-                            </a>
+                                </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
                                 aria-labelledby="userDropdown">
@@ -265,33 +265,88 @@
 
                 <!-- Begin Page Content -->
 
-                <div class="row">
-                    <div class="col-sm-6 mx-auto"> <!-- Added mx-auto class here -->
-                        <div class="card shadow mb-4">
-                        <div class="card-header bg-dark py-3 text-center">
-                                <h6 class="m-0 font-weight-normal text-light">Selamat datang di Administrator Panel</h6>
-                            </div>
-                            <div class="card-body">
-                                
-                                <div class="m-0">
-                                    Hi, Panel admin ini akan memudahkan anda dalam mengatur dan memodifikasi data. 
-                                    Silahkan mulai bernavigasi.
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-4">
+                             <!-- Tambah -->
+                             <div class="card shadow  mb-4 darkbg">
+                                <div class="card-header bg-dark py-3 ">
+                                    <h6 class="m-0 font-weight-normal text-light">Tambah Data Minuman</h6>
                                 </div>
-                                <hr>
-                                <div class="m-0">
-                                    <p>Ada beberapa opsi, seperti : </p>
-                                    <ul>
-                                        <li class="font-weight-bold">Pengaturan Data</li>
-                                        <p class="font-weight-light">Disini bisa mengatur data, seperti Menambah Data, Modifikasi Data, dan juga Menghapus data.</p>
-                                        <li class="font-weight-bold">History Pemesanan</li>
-                                        <p class="font-weight-light">Disini bisa melihat riwayat pesanan yang sudah dilakukan oleh pelanggan, sehingga memudahkan pengumpulan data.</p>
-                                    </ul>
+                                <div class="card-body">
+                                    <p>Opsi ini untuk menambahkan data Minuman baru untuk ditampilkan ke Pelanggan.</p>
+                                    <hr>
+                                    <a href="#" class="btn btn-dark btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </span>
+                                        <span class="text">Tambah</span>
+                                        <br>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-4">
+                             <!--  -->
+                             <div class="card shadow  mb-4 darkbg">
+                                <div class="card-header bg-dark py-3 ">
+                                    <h6 class="m-0 font-weight-normal text-light">Lihat Tabel Minuman</h6>
+                                </div>
+                                <div class="card-body">
+                                    <p>Opsi ini untuk menambahkan data Minuman baru untuk ditampilkan ke Pelanggan.</p>
+                                    <hr>
+                                    <a href="#" class="btn btn-dark btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </span>
+                                        <span class="text">Lihat</span>
+                                        <br>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-4">
+                             <!--  -->
+                             <div class="card shadow  mb-4 darkbg">
+                                <div class="card-header bg-dark py-3 ">
+                                    <h6 class="m-0 font-weight-normal text-light">Edit / Hapus</h6>
+                                </div>
+                                <div class="card-body">
+                                    <p>Opsi ini untuk menambahkan data Minuman baru untuk ditampilkan ke Pelanggan.</p>
+                                    <hr>
+                                    <a href="#" class="btn btn-dark btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </span>
+                                        <span class="text">Modifikasi</span>
+                                        <br>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
+
+                <div class="container-fluid">
+                    <?php
+                            $pages_dir='.';
+                            if(!empty ($_GET['p'])){
+                            $pages=scandir($pages_dir,0);
+                            unset($pages[0], $pages[1]);
+                            $p=$_GET['p'];
+                            if(in_array($p.".php", $pages)){
+                                include($pages_dir.'/'.$p.'.php');
+                            }else{
+                                echo "Halaman tidak ditemukan";
+                            }
+                            }
+                        ?>
+                </div>
 
                 </div>
                 </div>
@@ -303,10 +358,10 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <!-- <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
+            <!-- <footer class="sticky-footer darkbg text-light">
+                <div class="container text-center">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; RZT Team</span>
+                        <span>Project by RZT Team</span>
                     </div>
                 </div>
             </footer> -->
