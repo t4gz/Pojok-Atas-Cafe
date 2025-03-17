@@ -11344,6 +11344,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  text-align: center;
 }
 .card {
   height: 100%;
