@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../css/keranjang.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
 </head>
 <body>
     
@@ -43,7 +42,7 @@
                 <div>
                     <h5 class="mb-1">Matcha Latte</h5>
                     <p class="mb-0">Stok: 6</p>
-                    <p class="mb-0" style="color: red;">Harga: Rp25.000</p>
+                    <p class="mb-0" style="color:red;">Harga: Rp25.000</p>
                 </div>
             </div>
             <div class="quantity-container">
@@ -62,17 +61,29 @@
                 </div>
             </div>
             <div class="col-sm-6 text-end">
-                <button class="btn btn-danger rounded-20" onclick="location.href='Halaman_Pesanan.php'">Buat Pesanan</button>
+                <button class="btn btn-danger rounded-20" onclick="createOrder()">Buat Pesanan</button>
             </div>
         </div>
     </div>
 
     <script>
+        function createOrder() {
+            const nasiGorengQty = parseInt(document.getElementById('nasiGoreng').value);
+            const matchaLatteQty = parseInt(document.getElementById('matchaLatte').value);
+            
+            // Simpan jumlah ke localStorage
+            localStorage.setItem('nasiGorengQty', nasiGorengQty);
+            localStorage.setItem('matchaLatteQty', matchaLatteQty);
+
+            // Arahkan ke halaman pesanan
+            location.href = 'Halaman_Pesanan.php';
+        }
+
         function changeQuantity(itemId, change) {
             const input = document.getElementById(itemId);
             let currentValue = parseInt(input.value);
             currentValue += change;
-            if (currentValue < 0) currentValue = 0; // Prevent going below 1
+            if (currentValue < 0) currentValue = 0; // Prevent going below 0
             input.value = currentValue;
             updateTotal();
         }
