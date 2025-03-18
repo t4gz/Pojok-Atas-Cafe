@@ -11355,16 +11355,16 @@ section#contact form#contactForm :-ms-input-placeholder {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
   .btn-add {
       width: 25px;
       height: 25px;
       font-size: 14px;
   }
   .menu-item img {
-      width: 50%; /* Lebih kecil untuk tampilan mobile */
+      width: 50%; 
   }
-}
+} */
 
 /* KERANJANG */
 .iconkeranjang{
