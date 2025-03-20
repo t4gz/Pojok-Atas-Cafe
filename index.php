@@ -18,7 +18,7 @@
         <link href="css/plus.css" rel="stylesheet" />
     </head>
 
-    <body id="page-top" style="background-color:#babbbc; position:z-index;">
+    <body id="page-top" style="background-color:#babbbc; z-index:1;">
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand" href="#page-top"><img src="images/icon_pjk.svg" alt="..." /></a>
