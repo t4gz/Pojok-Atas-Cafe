@@ -1,3 +1,11 @@
+<?php
+require 'function.php';
+
+$makanan = getAllMakanan("SELECT * FROM makanan");
+$minuman = getAllMinuman("SELECT * FROM minuman");
+$cemilan = getAllCemilan("SELECT * FROM cemilan");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <!-- apalah dia -->
@@ -16,10 +24,10 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-        <link href="css/plus.css" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet" />
     </head>
-
-    <body id="page-top" style="background-color:#babbbc; z-index:1;">
+    <body id="page-top">
+        <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand" href="#page-top"><img src="images/icon_pjk.svg" alt="..." /></a>
@@ -32,152 +40,174 @@
                         <li class="nav-item"><a class="nav-link" href="#makanan">MAKANAN</a></li>
                         <li class="nav-item"><a class="nav-link" href="#minuman">MINUMAN</a></li>
                         <li class="nav-item"><a class="nav-link" href="#cemilan">CEMILAN</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    
                     </ul>
                 </div>
             </div>
         </nav>
-        
+        <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">
-                    <div class="masthead-logo">
-                        <img src="images/logo pojok.png" alt="" style="width: 20%; height: auto;">
-                    </div>
-                    <a class="btn btn-primary btn-md-xl text-uppercase" href="#makanan">Telusuri</a>
-                </div>
+            <div class="masthead-subheading">
+            <div class="masthead-logo">
+                <img src="images/logo pojok.png" alt="" style="width: 20%; height: auto;">
+            </div>
+                <!-- <div class="masthead-subheading">Selamat Datang di pojok atas</div> -->
+                <!-- <div class="masthead-heading text-uppercase">It's Nice To Meet You</div> -->
+                <a class="btn btn-primary btn-md-xl text-uppercase" href="#makanan">Telusuri</a>
             </div>
         </header>
-
-        <div class="iconkeranjang">
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="red" class="bi bi-basket2-fill" viewBox="0 0 16 16">
-                <path d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1"/>
-            </svg>
+    
+        <!-- KERANJANG -->
+        <div class="iconKeranjang" id="iconKeranjang">
+            <a href= "Halaman_Keranjang.php">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="red" class="bi bi-basket2-fill" viewBox="0 0 16 16">
+                    <path d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1"/>
+                </svg>
+            </a>
         </div>
 
-        <section class="container mt-4" id="makanan">
-            <h1 class="text-center">MAKANAN</h1>
-            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 g-2" id="menu-makanan">
-                <!-- Menu akan di-generate oleh JavaScript -->
-            </div>
+
+        <h3 id="makanan">Makanan</h3>
+        <section class = "daftar-makanan">
+            <!-- table database ganti sesuai nama table di database -->
+            <?php foreach($makanan as $mkn) : ?>
+                <div class = "makanan">
+                    <!-- ganti variable sesuai di database -->
+                    <img src = "../images/<?= $mkn["gambar"]; ?>">
+                    <p><?= $mkn["nama_makanan"]; ?></p>
+                    <p>Rp<?= $mkn["harga_makanan"]; ?> </p>
+                    <p>Stok <?= $mkn["stok_makanan"]; ?> </p>
+                    <a href = "Halaman_Keranjang.php?id= <? = $mkn['id_makanan']?>">+</a>
+                </div>
+            <?php endforeach; ?>
         </section>
 
-        <section class="container mt-4" id="minuman">
-            <h1 class="text-center">MINUMAN</h1>
-            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 g-2" id="menu-minuman">
-                <!-- Menu akan di-generate oleh JavaScript -->
-            </div>
+        <h3 id="minuman">Minuman</h3>
+        <section class = "daftar-minuman">
+            <!-- table database ganti sesuai nama table di database -->
+            <?php foreach($minuman as $mnm) : ?>
+                <div class = "minuman">
+                    <!-- ganti variable sesuai di database -->
+                    <img src = "../images/<?= $mnm["gambar"]; ?>">
+                    <p><?= $mnm["nama_minuman"]; ?> </p>
+                    <p>Rp<?= $mnm["harga_minuman"]; ?> </p>
+                    <p>Stok <?= $mnm["stok_minuman"]; ?> </p>
+                    <a href = "Halaman_Keranjang.php?id= <? = $mnm['id_minuman']?>">+</a>
+                </div>
+            <?php endforeach; ?>
         </section>
 
-        <section class="container mt-4" id="cemilan">
-            <h1 class="text-center">SNACK</h1>
-            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 g-2" id="menu-cemilan">
-                <!-- Menu akan di-generate oleh JavaScript -->
-            </div>
+        <h3 id="cemilan">Cemilan</h3>
+        <section class = "daftar-cemilan">
+            <!-- table database ganti sesuai nama table di database -->
+            <?php foreach($cemilan as $cml) : ?>
+                <div class = "cemilan">
+                    <!-- ganti variable sesuai di database -->
+                    <img src = "../images/<?= $cml["gambar"]; ?>">
+                    <p><?= $cml["nama_cemilan"]; ?> </p>
+                    <p>Rp<?= $cml["harga_cemilan"]; ?> </p>
+                    <p>Stok <?= $cml["stok_cemilan"]; ?> </p>
+                    <a href = "Halaman_Keranjang.php?id= <? = $cml['id_cemilan']?>">+</a>
+                </div>
+            <?php endforeach; ?>
         </section>
+
+        <!-- About-->
+        <section class="page-section" id="about">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">About</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>2009-2011</h4>
+                                <h4 class="subheading">Our Humble Beginnings</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="..." /></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>March 2011</h4>
+                                    <h4 class="subheading">An Agency is Born</h4>
+                                </div>
+                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>December 2015</h4>
+                                <h4 class="subheading">Transition to Full Service</h4>
+                            </div>
+                        <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                        </div>
+                    </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="..." /></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>July 2020</h4>
+                                    <h4 class="subheading">Phase Two Expansion</h4>
+                                </div>
+                                <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <h4>
+                                    Be Part
+                                    <br />
+                                    Of Our
+                                    <br />
+                                    Story!
+                                </h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
 
         <script>
-            // DATA MAKANAN
-            const makananItems = [
-                { id: 1, name: "Nasi Goreng", price: 20000, stok: 10, image: "nasi_goreng.jpg" },
-                { id: 2, name: "Mie Goreng", price: 15000, stok: 5, image: "mie_goreng.jpg" },
-                { id: 3, name: "Sate Ayam", price: 25000, stok: 8, image: "sate_ayam.jpg" },
-                { id: 4, name: "Rendang", price: 30000, stok: 4, image: "rendang.jpg" },
-                { id: 5, name: "Gado-Gado", price: 18000, stok: 6, image: "gado_gado.jpg" },
-                { id: 6, name: "Soto Ayam", price: 22000, stok: 7, image: "soto_ayam.jpg" }
-            ];
+            const icon = document.getElementById('iconKeranjang');
 
-            // DATA MINUMAN
-            const minumanItems = [
-                { id: 1, name: "Teh Botol", price: 5000, stok: 20, image: "teh_botol.jpg" },
-                { id: 2, name: "Kopi", price: 10000, stok: 15, image: "kopi.jpg" },
-                { id: 3, name: "Jus Jeruk", price: 12000, stok: 10, image: "jus_jeruk.jpg" },
-                { id: 4, name: "Air Mineral", price: 3000, stok: 50, image: "air_mineral.jpg" },
-                { id: 5, name: "Soda", price: 8000, stok: 25, image: "soda.jpg" },
-                { id: 6, name: "Es Teh", price: 7000, stok: 30, image: "es_teh.jpg" }
-            ];
+            window.addEventListener('scroll', function () {
+                const makanan = document.querySelector('.daftar-makanan');
+                const minuman = document.querySelector('.daftar-minuman');
+                const cemilan = document.querySelector('.daftar-cemilan');
+                const makananTop = makanan.offsetTop;
+                const minumanTop = minuman.offsetTop;
+                const cemilanTop = cemilan.offsetTop;
+                const scrollY = window.scrollY;
 
-            // DATA SNACK
-            const snackItems = [
-                { id: 1, name: "Keripik", price: 5000, stok: 40, image: "keripik.jpg" },
-                { id: 2, name: "Kue Cubir", price: 6000, stok: 35, image: "kue_cubir.jpg" },
-                { id: 3, name: "Roti Bakar", price: 7000, stok: 20, image: "roti_bakar.jpg" },
-                { id: 4, name: "Pisang Goreng", price: 8000, stok: 15, image: "pisang_goreng.jpg" },
-                { id: 5, name: "Donat", price: 9000, stok: 10, image: "donat.jpg" },
-                { id: 6, name: "Kue Lapis", price: 10000, stok: 5, image: "kue_lapis.jpg" }
-            ];
-
-            // MENAMPILKAN MENU MAKANAN
-            function renderMenuMakanan() {
-                let menuList = document.getElementById("menu-makanan");
-                menuList.innerHTML = "";
-                makananItems.forEach(item => {
-                    menuList.innerHTML += `
-                        <div class="col">
-                            <div class="card p-1 text-center menu-item">
-                                <div class="position-relative">
-                                    <img src="images/${item.image}" class="img-fluid" alt="${item.name}">
-                                    <button class="btn btn-add btn-success">+</button>
-                                </div>
-                                <div class="card-body">
-                                    <h5>${item.name}</h5>
-                                    <p>Harga: Rp${item.price}</p>
-                                    <p>Stok ${item.stok}</p>
-                                </div>
-                            </div>
-                        </div>`;
-                });
-            }
-            renderMenuMakanan();
-
-            // MENAMPILKAN MENU MINUMAN
-            function renderMenuMinuman() {
-                let menuList = document.getElementById("menu-minuman");
-                menuList.innerHTML = "";
-                minumanItems.forEach(item => {
-                    menuList.innerHTML += `
-                        <div class="col">
-                            <div class="card p-1 text-center menu-item">
-                                <div class="position-relative">
-                                    <img src="images/${item.image}" class="img-fluid" alt="${item.name}">
-                                    <button class="btn btn-add btn-success">+</button>
-                                </div>
-                                <div class="card-body">
-                                    <h5>${item.name}</h5>
-                                    <p>Harga: Rp${item.price}</p>
-                                    <p>Stok ${item.stok}</p>
-                                </div>
-                            </div>
-                        </div>`;
-                });
-            }
-            renderMenuMinuman();
-
-            // MENAMPILKAN MENU SNACK
-            function renderMenuSnack() {
-                let menuList = document.getElementById("menu-cemilan");
-                menuList.innerHTML = "";
-                snackItems.forEach(item => {
-                    menuList.innerHTML += `
-                        <div class="col">
-                            <div class="card p-1 text-center menu-item">
-                                <div class="position-relative">
-                                    <img src="images/${item.image}" class="img-fluid" alt="${item.name}">
-                                    <button class="btn btn-add btn-success">+</button>
-                                </div>
-                                <div class="card-body">
-                                    <h5>${item.name}</h5>
-                                    <p>Harga: Rp${item.price}</p>
-                                    <p>Stok ${item.stok}</p>
-                                </div>
-                            </div>
-                        </div>`;
-                });
-            }
-            renderMenuSnack();
+                if (
+                (scrollY >= makananTop - 200 && scrollY <= minumanTop + minuman.offsetHeight) ||
+                (scrollY >= cemilanTop - 200 && scrollY <= cemilanTop + cemilan.offsetHeight)
+                ) {
+                icon.style.display = 'block';
+                } else {
+                icon.style.display = 'none';
+                }
+            });
         </script>
-        
+            
+        <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
