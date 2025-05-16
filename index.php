@@ -20,6 +20,7 @@ $cemilan = getAllCemilan("SELECT * FROM cemilan");
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -69,50 +70,69 @@ $cemilan = getAllCemilan("SELECT * FROM cemilan");
         </div>
 
 
-        <h3 id="makanan">Makanan</h3>
-        <section class = "daftar-makanan">
-            <!-- table database ganti sesuai nama table di database -->
-            <?php foreach($makanan as $mkn) : ?>
-                <div class = "makanan">
-                    <!-- ganti variable sesuai di database -->
-                    <img src = "images/<?= $mkn["gambar"]; ?>">
-                    <p><?= $mkn["nama_makanan"]; ?></p>
-                    <p>Rp<?= $mkn["harga_makanan"]; ?> </p>
-                    <p>Stok <?= $mkn["stok_makanan"]; ?> </p>
-                    <a href = "Halaman_Keranjang.php?id= <? = $mkn['id_makanan']?>">+</a>
-                </div>
-            <?php endforeach; ?>
-        </section>
+        <h3 id="makanan" class="text-center my-4">Makanan</h3>
+        <div class="container">
+            <div class="row g-4">
+                <?php foreach($makanan as $mkn) : ?>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card shadow-sm h-100">
+                            <div class="gambar-container">
+                                <img src="images/<?= $mkn["gambar"]; ?>" class="card-img-top" alt="<?= $mkn["nama_makanan"]; ?>">
+                                <a class="tombol-plus" href="Halaman_Keranjang.php?id=<?= $mkn['id_makanan'] ?>">+</a>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title"><?= $mkn["nama_makanan"]; ?></h5>
+                                <p class="card-text">Rp<?= number_format($mkn["harga_makanan"], 0, ',', '.'); ?></p>
+                                <p class="text-muted">Stok: <?= $mkn["stok_makanan"]; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
 
-        <h3 id="minuman">Minuman</h3>
-        <section class = "daftar-minuman">
-            <!-- table database ganti sesuai nama table di database -->
-            <?php foreach($minuman as $mnm) : ?>
-                <div class = "minuman">
-                    <!-- ganti variable sesuai di database -->
-                    <img src = "images/<?= $mnm["gambar"]; ?>">
-                    <p><?= $mnm["nama_minuman"]; ?> </p>
-                    <p>Rp<?= $mnm["harga_minuman"]; ?> </p>
-                    <p>Stok <?= $mnm["stok_minuman"]; ?> </p>
-                    <a href = "Halaman_Keranjang.php?id= <? = $mnm['id_minuman']?>">+</a>
-                </div>
-            <?php endforeach; ?>
-        </section>
 
-        <h3 id="cemilan">Cemilan</h3>
-        <section class = "daftar-cemilan">
-            <!-- table database ganti sesuai nama table di database -->
-            <?php foreach($cemilan as $cml) : ?>
-                <div class = "cemilan">
-                    <!-- ganti variable sesuai di database -->
-                    <img src = "images/<?= $cml["gambar"]; ?>">
-                    <p><?= $cml["nama_cemilan"]; ?> </p>
-                    <p>Rp<?= $cml["harga_cemilan"]; ?> </p>
-                    <p>Stok <?= $cml["stok_cemilan"]; ?> </p>
-                    <a href = "Halaman_Keranjang.php?id= <? = $cml['id_cemilan']?>">+</a>
-                </div>
-            <?php endforeach; ?>
-        </section>
+        <h3 id="minuman" class="text-center my-4">Minuman</h3>
+        <div class="container">
+            <div class="row g-4">
+                <?php foreach($minuman as $mnm) : ?>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card shadow-sm h-100">
+                            <div class="gambar-container">
+                                <img src="images/<?= $mnm["gambar"]; ?>" class="card-img-top" alt="<?= $mnm["nama_minuman"]; ?>">
+                                <a class="tombol-plus" href="Halaman_Keranjang.php?id=<?= $mnm['id_minuman'] ?>">+</a>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title"><?= $mnm["nama_minuman"]; ?></h5>
+                                <p class="card-text">Rp<?= number_format($mnm["harga_minuman"], 0, ',', '.'); ?></p>
+                                <p class="text-muted">Stok: <?= $mnm["stok_minuman"]; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+
+        <h3 id="cemilan" class="text-center my-4">Cemilan</h3>
+        <div class="container">
+            <div class="row g-4">
+                <?php foreach($cemilan as $cml) : ?>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card shadow-sm h-100">
+                            <div class="gambar-container">
+                                <img src="images/<?= $cml["gambar"]; ?>" class="card-img-top" alt="<?= $cml["nama_cemilan"]; ?>">
+                                <a class="tombol-plus" href="Halaman_Keranjang.php?id=<?= $cml['id_cemilan'] ?>">+</a>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title"><?= $cml["nama_cemilan"]; ?></h5>
+                                <p class="card-text">Rp<?= number_format($cml["harga_cemilan"], 0, ',', '.'); ?></p>
+                                <p class="text-muted">Stok: <?= $cml["stok_cemilan"]; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
     
         <!-- About-->
         <section class="page-section" id="about">
