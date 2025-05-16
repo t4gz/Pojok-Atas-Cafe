@@ -1,0 +1,153 @@
+.daftar-makanan {
+  background-color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.makanan {
+  border-radius: 10px;
+  text-align: center;
+  background-color: #ffffff;
+  width: 175px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.daftar-minuman {
+  background-color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.minuman {
+  border-radius: 10px;
+  text-align: center;
+  background-color: #ffffff;
+  width: 175px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.daftar-cemilan {
+  background-color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.cemilan {
+  border-radius: 10px;
+  text-align: center;
+  background-color: #ffffff;
+  width: 175px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+h3#makanan{
+  padding-top:20px;
+  padding-left: 20px;
+}
+
+h3#minuman,
+h3#cemilan {
+  padding-top: 50px;
+  padding-left: 20px;
+}
+
+/* css keranjang */
+.iconKeranjang {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  display: none;
+}
+
+.makanan a{
+  display: block;
+  margin: auto;
+  width: 60px;
+  text-decoration: none;
+  color: #000000;
+  background-color: #fae04b;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+}
+
+.minuman a{
+  display: block;
+  margin: auto;
+  width: 60px;
+  text-decoration: none;
+  color: #000000;
+  background-color: #fae04b;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+}
+
+.makanan img,
+.minuman img,
+.cemilan img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto; 
+  border-radius: 10px;
+}
+
+.gambar-container {
+position: relative;
+}
+
+.gambar-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.tombol-plus {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #28a745;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 40%;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: 0.2s;
+}
+
+.tombol-plus:hover {
+  background-color: #218838;
+  text-decoration: none;
+}
