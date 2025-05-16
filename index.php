@@ -75,7 +75,7 @@ $cemilan = getAllCemilan("SELECT * FROM cemilan");
             <?php foreach($makanan as $mkn) : ?>
                 <div class = "makanan">
                     <!-- ganti variable sesuai di database -->
-                    <img src = "../images/<?= $mkn["gambar"]; ?>">
+                    <img src = "images/<?= $mkn["gambar"]; ?>">
                     <p><?= $mkn["nama_makanan"]; ?></p>
                     <p>Rp<?= $mkn["harga_makanan"]; ?> </p>
                     <p>Stok <?= $mkn["stok_makanan"]; ?> </p>
@@ -90,7 +90,7 @@ $cemilan = getAllCemilan("SELECT * FROM cemilan");
             <?php foreach($minuman as $mnm) : ?>
                 <div class = "minuman">
                     <!-- ganti variable sesuai di database -->
-                    <img src = "../images/<?= $mnm["gambar"]; ?>">
+                    <img src = "images/<?= $mnm["gambar"]; ?>">
                     <p><?= $mnm["nama_minuman"]; ?> </p>
                     <p>Rp<?= $mnm["harga_minuman"]; ?> </p>
                     <p>Stok <?= $mnm["stok_minuman"]; ?> </p>
@@ -105,7 +105,7 @@ $cemilan = getAllCemilan("SELECT * FROM cemilan");
             <?php foreach($cemilan as $cml) : ?>
                 <div class = "cemilan">
                     <!-- ganti variable sesuai di database -->
-                    <img src = "../images/<?= $cml["gambar"]; ?>">
+                    <img src = "images/<?= $cml["gambar"]; ?>">
                     <p><?= $cml["nama_cemilan"]; ?> </p>
                     <p>Rp<?= $cml["harga_cemilan"]; ?> </p>
                     <p>Stok <?= $cml["stok_cemilan"]; ?> </p>
@@ -161,7 +161,6 @@ $cemilan = getAllCemilan("SELECT * FROM cemilan");
                                 </div>
                                 <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
                             </div>
-<<<<<<< HEAD
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">

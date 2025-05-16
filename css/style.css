@@ -122,3 +122,14 @@ h3#cemilan {
   margin-bottom: 5px;
   border-radius: 20px;
 }
+
+.makanan img,
+.minuman img,
+.cemilan img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+    border-radius: 10px;
+}
