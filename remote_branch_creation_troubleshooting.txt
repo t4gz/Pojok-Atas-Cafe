@@ -1,0 +1,25 @@
+Here is the troubleshooting plan for creating a remote branch named `ramdhan_a1` in Git:
+
+1. **Check Remote Connection**:
+   - Run the command: `git remote -v` to verify that the remote repository is correctly set up.
+
+2. **Ensure You Are on the Correct Branch**:
+   - Check your current branch with: `git branch` to ensure you are on the branch from which you want to create the new branch.
+
+3. **Create the New Local Branch**:
+   - If not already done, create the new branch: `git checkout -b ramdhan_a1`.
+
+4. **Make Changes**:
+   - Ensure you have made some changes to files in your repository. You can add a new file or modify an existing one.
+
+5. **Stage and Commit Changes**:
+   - Stage your changes using: `git add .`
+   - Commit the changes with: `git commit -m "Your commit message"`.
+
+6. **Push the New Branch to Remote**:
+   - Now push the new branch to the remote repository: `git push -u origin ramdhan_a1`.
+
+7. **Verify the Branch Creation**:
+   - Confirm that the branch has been created on the remote by running: `git branch -r` to list remote branches.
+
+This plan will help ensure that you can successfully create and push the remote branch `ramdhan_a1`.
