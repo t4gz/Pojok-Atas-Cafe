@@ -11352,6 +11352,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   justify-content: center;
   align-items: center;
 }
+
 @media (max-width: 576px) {
   .btn-add {
       width: 25px;
@@ -11362,3 +11363,12 @@ section#contact form#contactForm :-ms-input-placeholder {
       width: 50%; /* Lebih kecil untuk tampilan mobile */
   }
 }
+
+/* KERANJANG */
+.iconkeranjang{
+  position: fixed;
+  bottom:55px;
+  right:12px;
+  z-index:1000;
+}
+
