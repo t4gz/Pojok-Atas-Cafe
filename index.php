@@ -61,8 +61,8 @@ $cemilan = getAllCemilan("SELECT * FROM cemilan");
         </header>
     
         <!-- KERANJANG -->
-        <div class="iconKeranjang" id="iconKeranjang">
-            <a href= "Halaman_Keranjang.php">
+        <div class="iconkeranjang" id="iconkeranjang">
+            <a href= "Pages/Halaman_Keranjang.php">
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="red" class="bi bi-basket2-fill" viewBox="0 0 16 16">
                     <path d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1"/>
                 </svg>
@@ -78,7 +78,7 @@ $cemilan = getAllCemilan("SELECT * FROM cemilan");
                         <div class="card shadow-sm h-100">
                             <div class="gambar-container">
                                 <img src="images/<?= $mkn["gambar"]; ?>" class="card-img-top" alt="<?= $mkn["nama_makanan"]; ?>">
-                                <a class="tombol-plus" href="Halaman_Keranjang.php?id=<?= $mkn['id_makanan'] ?>">+</a>
+                                <a class="tombol-plus" href="Pages/Halaman_Keranjang.php?type=makanan&id=<?= $mkn['id_makanan'] ?>">+</a>
                             </div>
                             <div class="card-body text-center">
                                 <h5 class="card-title"><?= $mkn["nama_makanan"]; ?></h5>
@@ -100,7 +100,7 @@ $cemilan = getAllCemilan("SELECT * FROM cemilan");
                         <div class="card shadow-sm h-100">
                             <div class="gambar-container">
                                 <img src="images/<?= $mnm["gambar"]; ?>" class="card-img-top" alt="<?= $mnm["nama_minuman"]; ?>">
-                                <a class="tombol-plus" href="Halaman_Keranjang.php?id=<?= $mnm['id_minuman'] ?>">+</a>
+                                <a class="tombol-plus" href="Pages/Halaman_Keranjang.php?type=minuman&id=<?= $mnm['id_minuman'] ?>">+</a>
                             </div>
                             <div class="card-body text-center">
                                 <h5 class="card-title"><?= $mnm["nama_minuman"]; ?></h5>
@@ -121,7 +121,7 @@ $cemilan = getAllCemilan("SELECT * FROM cemilan");
                         <div class="card shadow-sm h-100">
                             <div class="gambar-container">
                                 <img src="images/<?= $cml["gambar"]; ?>" class="card-img-top" alt="<?= $cml["nama_cemilan"]; ?>">
-                                <a class="tombol-plus" href="Halaman_Keranjang.php?id=<?= $cml['id_cemilan'] ?>">+</a>
+                                <a class="tombol-plus" href="Pages/Halaman_Keranjang.php?type=cemilan&id=<?= $cml['id_cemilan'] ?>">+</a>
                             </div>
                             <div class="card-body text-center">
                                 <h5 class="card-title"><?= $cml["nama_cemilan"]; ?></h5>
@@ -198,12 +198,12 @@ $cemilan = getAllCemilan("SELECT * FROM cemilan");
             </section>
 
         <script>
-            const icon = document.getElementById('iconKeranjang');
+            const icon = document.getElementById('iconkeranjang');
 
             window.addEventListener('scroll', function () {
-                const makanan = document.querySelector('.daftar-makanan');
-                const minuman = document.querySelector('.daftar-minuman');
-                const cemilan = document.querySelector('.daftar-cemilan');
+                const makanan = document.getElementById('makanan');
+                const minuman = document.getElementById('minuman');
+                const cemilan = document.getElementById('cemilan');
                 const makananTop = makanan.offsetTop;
                 const minumanTop = minuman.offsetTop;
                 const cemilanTop = cemilan.offsetTop;

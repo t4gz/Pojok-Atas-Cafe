@@ -16,7 +16,7 @@ function getAllMakanan($query){
 // mengambil data makanan dari id untuk ditampilkan
 function getMakananById($id){
     global $db;
-    $query = "SELECT * FROM makanan WHERE id = $id";
+    $query = "SELECT * FROM makanan WHERE id_makanan = $id";
     $result = mysqli_query($db, $query);
     return mysqli_fetch_assoc($result);
 }
@@ -36,7 +36,7 @@ function getAllMinuman($query){
 // mengambil data minuman dari id untuk ditampilkan
 function getMinumanById($id){
     global $db;
-    $query = "SELECT * FROM minuman WHERE id = $id";
+    $query = "SELECT * FROM minuman WHERE id_minuman = $id";
     $result = mysqli_query($db, $query);
     return mysqli_fetch_assoc($result);
 }
@@ -56,7 +56,7 @@ function getAllCemilan($query){
 // mengambil data cemilan dari id untuk ditampilkan
 function getCemilanById($id){
     global $db;
-    $query = "SELECT * FROM cemilan WHERE id = $id";
+    $query = "SELECT * FROM cemilan WHERE id_cemilan = $id";
     $result = mysqli_query($db, $query);
     return mysqli_fetch_assoc($result);
 }
