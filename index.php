@@ -40,7 +40,7 @@ $cemilan = getAllCemilan("SELECT * FROM cemilan");
                         <li class="nav-item"><a class="nav-link" href="#makanan">MAKANAN</a></li>
                         <li class="nav-item"><a class="nav-link" href="#minuman">MINUMAN</a></li>
                         <li class="nav-item"><a class="nav-link" href="#cemilan">SNACK</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li> -->
                     </ul>
                 </div>
             </div>
@@ -130,7 +130,7 @@ $cemilan = getAllCemilan("SELECT * FROM cemilan");
         </div>
 
         <!-- About-->
-        <section class="page-section" id="about">
+        <!-- <section class="page-section" id="about">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">About</h2>
@@ -190,7 +190,7 @@ $cemilan = getAllCemilan("SELECT * FROM cemilan");
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> -->
 
         <script>
             const icon = document.getElementById('iconkeranjang');
