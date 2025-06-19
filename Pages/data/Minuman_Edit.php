@@ -1,10 +1,25 @@
 <?php
-    include '../php/koneksi.php';
-    if (!isset($_SESSION['username'])) {
-        header("Location: ../../php/Login.php");
-        exit;
+    include '../../php/koneksi.php';
+
+    if (!isset($_GET['id'])) {
+        die("ID minuman tidak ditemukan.");
     }
 
+    $id = $_GET['id'];
+
+    $sql = "SELECT * FROM minuman WHERE id_minuman = $id";
+    $result = mysqli_query($konek, $sql);
+
+    if (mysqli_num_rows($result) == 0) {
+        die("Data minuman tidak ditemukan.");
+    }
+
+    $row = mysqli_fetch_assoc($result);
+
+    $nama = $row['nama_minuman'];
+    $harga = $row['harga_minuman'];
+    $stok = $row['stok_minuman'];
+    $foto = $row['gambar'];
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +33,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Tambah Data Minuman</title>
+    <title>Edit Data Minuman</title>
 
     <!-- Custom fonts for this template-->
     <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -47,29 +62,30 @@
                             <div class="col-lg-12">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Tambah Data Minuman</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Edit Data Minuman</h1>
                                     </div>
-<form action="data/Minuman_InputProcess.php" method="POST" enctype="multipart/form-data" class="mx-4 mt-4">
+                                    <form action="./Minuman_UpdateProcess.php" method="POST" enctype="multipart/form-data" class="mx-4 mt-4">
+                                        <input type="hidden" name="id" value="<?php echo $id; ?>" />
                                         <div class="mb-3">
                                             <label for="nama_minuman" class="form_label">Nama :</label>
-                                            <input type="text" class="form-control" id="nama_minuman" name="nama_minuman" required />
+                                            <input type="text" class="form-control" id="nama_minuman" name="nama_minuman" value="<?php echo htmlspecialchars($nama); ?>" required />
                                         </div>
                                         <div class="mb-3">
                                             <label for="harga_minuman" class="form_label">Harga :</label>
-                                            <input type="text" class="form-control" id="harga_minuman" name="harga_minuman" required />
+                                            <input type="text" class="form-control" id="harga_minuman" name="harga_minuman" value="<?php echo htmlspecialchars($harga); ?>" required />
                                         </div>
                                         <div class="mb-3">
                                             <label for="stok_minuman" class="form_label">Stok :</label>
-                                            <input type="text" class="form-control" id="stok_minuman" name="stok_minuman" required />
+                                            <input type="text" class="form-control" id="stok_minuman" name="stok_minuman" value="<?php echo htmlspecialchars($stok); ?>" required />
                                         </div>
                                         <div class="mb-3">
-                                            <label for="foto" class="form_label">Foto :</label>
-                                            <input type="file" class="form-control" id="foto" name="foto" accept="image/*" required />
+                                            <label for="foto" class="form_label">Foto (biarkan kosong jika tidak ingin mengganti) :</label>
+                                            <input type="file" class="form-control" id="foto" name="foto" accept="image/*" />
+                                            <br />
+                                            <img src="uploads/<?php echo htmlspecialchars($foto); ?>" alt="Foto Minuman" style="width: 200px; height: auto;" />
                                         </div>
-                                        <button type="submit" class="btn btn-dark text-light">Submit</button>
-
-                                        <button type="reset" class="btn btn-danger">Reset</button>
-
+                                        <button type="submit" class="btn btn-dark text-light">Update</button>
+                                        <a href="../Admin_Snack.php?p=Minuman_EditHapus" class="btn btn-secondary">Batal</a>
                                     </form>
                                 </div>
                             </div>

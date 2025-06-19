@@ -49,18 +49,18 @@
 
                                         <div class="mb-3">
                                             <label for="text" class="form_label"><div style="">Nama :</div></label>
-                                            <input type="text" class="form-control" id="nama" name="nama" required>
+                                            <input type="text" class="form-control" id="nama_makanan" name="nama_makanan" required>
                                         </div>
 
                                         <div class="mb-3">
                                             <label for="text" class="form_label"><div style="">Harga :</div></label>
-                                            <input type="text" class="form-control" id="harga" name="harga"required>
+                                            <input type="text" class="form-control" id="harga_makanan" name="harga_makanan" required>
                                         </div>
                                         
 
                                         <div class="mb-3">
-                                            <label for="text" class="form_label"><div style="">Deskripsi :</div></label>
-                                            <input type="text" class="form-control" id="deskripsi" name="deskripsi" required>
+                                            <label for="text" class="form_label"><div style="">Stok :</div></label>
+                                            <input type="text" class="form-control" id="stok_makanan" name="stok_makanan" required>
                                         </div>
 
                                         <div class="mb-3">

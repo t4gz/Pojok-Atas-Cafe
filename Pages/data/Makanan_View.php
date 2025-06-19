@@ -19,31 +19,30 @@
                             <th>No</th>
                             <th>Nama</th>
                             <th>Harga</th>
-                            <th>Deskripsi</th>
+                            <th>Stok</th>
                             <th>Foto</th>
                         </tr>
                     </thead>
                     <tbody>
                     <?php
-                        $sql = "SELECT * FROM makanan WHERE aktif = 1";
+                        $sql = "SELECT * FROM makanan";
                         $result = mysqli_query($konek, $sql);
                         $no = 1;
 
                         if (mysqli_num_rows($result) > 0) {
                             while($row = mysqli_fetch_assoc($result)) {
-                                $id = $row['id'];
-                                $nama = $row['nama'];
-                                $harga = $row['harga'];
-                                $foto = $row['foto'];
-                                $deskripsi = $row['deskripsi'];
+                                $id = $row['id_makanan'];
+                                $nama = $row['nama_makanan'];
+                                $harga = $row['harga_makanan'];
+                                $stok = $row['stok_makanan'];
+                                $foto = $row['gambar'];
 
                                 echo "<tr>";
                                 echo "<td class='text-center' width='2%'>$no</td>";
                                 echo "<td width='15%'>$nama</td>";
                                 echo "<td class='text-center' width='12%'>Rp " . number_format($harga, 0, ',', '.') . "</td>";
-                                echo "<td width='30%'>$deskripsi</td>";
-                                echo "<td class='text-center'><img src='../pages/data/$foto' style='width: 200px; height: auto;'></td>";
-
+                                echo "<td class='text-center' width='12%'>$stok</td>";
+                                echo "<td class='text-center'><img src='data/uploads/$foto' style='width: 200px; height: auto;'></td>";
                                 echo "</tr>";
                                 $no++;
                             }

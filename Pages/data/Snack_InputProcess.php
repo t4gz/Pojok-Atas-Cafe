@@ -1,10 +1,9 @@
- <?php
+<?php
     include '../../php/koneksi.php';
 
-    $nama = $_POST['nama_makanan'];
-    $harga = $_POST['harga_makanan'];
-    $stok = $_POST['stok_makanan'];
-
+    $nama = $_POST['cemilan'];
+    $harga = $_POST['harga_cemilan'];
+    $stok = $_POST['stok_cemilan'];
 
     if (!is_numeric($harga) || $harga < 0) {
         die("Invalid price value.");
@@ -19,11 +18,11 @@
             die("Error uploading file.");
         }
 
-        $sql = "INSERT INTO makanan (nama_makanan, harga_makanan, stok_makanan, gambar) 
+        $sql = "INSERT INTO cemilan (nama_cemilan, harga_cemilan, stok_cemilan, gambar) 
                 VALUES ('$nama', '$harga', '$stok', '$target_file')";
 
         if (mysqli_query($konek, $sql)) {
-            header("location:../Admin_makanan.php?p=Makanan_Tambah");
+            header("location:../Admin_Snack.php?p=Snack_Tambah");
         } else {
             die("Database insert error: " . mysqli_error($konek));
         }

@@ -1,9 +1,9 @@
- <?php
+<?php
     include '../../php/koneksi.php';
 
-    $nama = $_POST['nama_makanan'];
-    $harga = $_POST['harga_makanan'];
-    $stok = $_POST['stok_makanan'];
+    $nama = $_POST['nama_minuman'];
+    $harga = $_POST['harga_minuman'];
+    $stok = $_POST['stok_minuman'];
 
 
     if (!is_numeric($harga) || $harga < 0) {
@@ -19,11 +19,11 @@
             die("Error uploading file.");
         }
 
-        $sql = "INSERT INTO makanan (nama_makanan, harga_makanan, stok_makanan, gambar) 
+        $sql = "INSERT INTO minuman (nama_minuman, harga_minuman, stok_minuman, gambar) 
                 VALUES ('$nama', '$harga', '$stok', '$target_file')";
 
         if (mysqli_query($konek, $sql)) {
-            header("location:../Admin_makanan.php?p=Makanan_Tambah");
+            header("location:../Admin_Minuman.php?p=Minuman_Tambah");
         } else {
             die("Database insert error: " . mysqli_error($konek));
         }
