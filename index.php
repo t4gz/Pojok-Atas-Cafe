@@ -39,7 +39,7 @@ $cemilan = getAllCemilan("SELECT * FROM cemilan");
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#makanan">MAKANAN</a></li>
                         <li class="nav-item"><a class="nav-link" href="#minuman">MINUMAN</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#cemilan">SNACK</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#cemilan">CEMILAN</a></li>
                         <!-- <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li> -->
                     </ul>
                 </div>
