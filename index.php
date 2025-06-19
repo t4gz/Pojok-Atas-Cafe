@@ -196,21 +196,12 @@ $cemilan = getAllCemilan("SELECT * FROM cemilan");
             const icon = document.getElementById('iconkeranjang');
 
             window.addEventListener('scroll', function () {
-                const makanan = document.getElementById('makanan');
-                const minuman = document.getElementById('minuman');
-                const cemilan = document.getElementById('cemilan');
-                const makananTop = makanan.offsetTop;
-                const minumanTop = minuman.offsetTop;
-                const cemilanTop = cemilan.offsetTop;
                 const scrollY = window.scrollY;
 
-                if (
-                    (scrollY >= makananTop - 200 && scrollY <= minumanTop + minuman.offsetHeight) ||
-                    (scrollY >= cemilanTop - 200 && scrollY <= cemilanTop + cemilan.offsetHeight)
-                ) {
-                    icon.style.display = 'block';
+                if (scrollY > 500) {
+                    icon.style.display = 'block'; // tampilkan ikon jika scroll > 200px
                 } else {
-                    icon.style.display = 'none';
+                    icon.style.display = 'none'; // sembunyikan jika masih di atas
                 }
             });
         </script>
