@@ -73,7 +73,7 @@
             </li>
 
             <!-- Divider -->
-            <hr class="sidebar-divider">
+            <!-- <hr class="sidebar-divider"> -->
 
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -113,7 +113,7 @@
             </li> -->
 
             <!-- Divider -->
-            <hr class="sidebar-divider">
+            <!-- <hr class="sidebar-divider"> -->
 
             <!-- Heading -->
             <!-- <div class="sidebar-heading">
@@ -142,11 +142,11 @@
             </li> -->
 
             <!-- Nav Item - HISTORY PEMESANAN -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="Admin_History.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>History Pemesanan</span></a>
-            </li>
+            </li> -->
 
             <!-- Nav Item - Tables -->
             <!-- <li class="nav-item">
@@ -290,7 +290,7 @@
                                     <ul>
                                         <li class="font-weight-bold">Pengaturan Data</li>
                                         <p class="font-weight-light">Disini bisa mengatur data, seperti Menambah Data, Modifikasi Data, dan juga Menghapus data.</p>
-                                        <li class="font-weight-bold">History Pemesanan</li>
+                                        <!-- <li class="font-weight-bold">History Pemesanan</li> -->
                                         <p class="font-weight-light">Disini bisa melihat riwayat pesanan yang sudah dilakukan oleh pelanggan, sehingga memudahkan pengumpulan data.</p>
                                     </ul>
                                 </div>
