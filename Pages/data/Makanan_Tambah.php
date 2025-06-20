@@ -65,7 +65,7 @@
 
                                         <div class="mb-3">
                                             <label for="foto" class="form_label"><div style="">Foto :</div></label>
-                                            <input type="file" class="form-control" id="foto" name="foto" accept="image/*">
+                                            <input type="file" class="form-control" id="foto" name="foto" accept="image/*" required>
                                         </div>
                                         <button type="submit" class="btn btn-dark text-light">Submit</button>
 

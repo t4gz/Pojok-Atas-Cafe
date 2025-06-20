@@ -113,7 +113,7 @@
             </li> -->
 
             <!-- Divider -->
-            <hr class="sidebar-divider">
+            <!-- <hr class="sidebar-divider"> -->
 
             <!-- Heading -->
             <!-- <div class="sidebar-heading">
@@ -142,11 +142,11 @@
             </li> -->
 
             <!-- Nav Item - HISTORY PEMESANAN -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="Admin_History.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>History Pemesanan</span></a>
-            </li>
+            </li> -->
 
             <!-- Nav Item - Tables -->
             <!-- <li class="nav-item">

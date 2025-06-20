@@ -48,14 +48,14 @@ if (isset($_FILES['foto']) && $_FILES['foto']['error'] == UPLOAD_ERR_OK) {
     }
 
     $foto = basename($_FILES['foto']['name']);
-    $target_dir = "uploads/";
+    $target_dir = "../../images/";
     $target_file = $target_dir . uniqid() . "_" . $foto;
 
     if (!move_uploaded_file($_FILES["foto"]["tmp_name"], $target_file)) {
         die("Gagal mengunggah file foto.");
     }
     $update_foto = true;
-    $foto_path = $target_file;
+    $foto_path = basename($target_file);
 }
 
 if ($update_foto) {

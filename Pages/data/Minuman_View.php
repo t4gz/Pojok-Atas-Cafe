@@ -42,7 +42,7 @@
                                 echo "<td width='15%'>$nama</td>";
                                 echo "<td class='text-center' width='12%'>Rp " . number_format($harga, 0, ',', '.') . "</td>";
                                 echo "<td class='text-center' width='12%'>$stok</td>";
-                                echo "<td class='text-center'><img src='data/uploads/$foto' style='width: 200px; height: auto;'></td>";
+                                echo "<td class='text-center'><img src='../images/$foto' style='width: 200px; height: auto;'></td>";
                                 echo "</tr>";
                                 $no++;
                             }

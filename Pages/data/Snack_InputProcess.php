@@ -10,16 +10,17 @@
     }
 
     if (isset($_FILES['foto']) && $_FILES['foto']['error'] == UPLOAD_ERR_OK) {
-        $foto = $_FILES['foto']['name'];
-        $target_dir = "uploads/";
-        $target_file = $target_dir . basename($foto);
+        $foto = basename($_FILES['foto']['name']);
+        $target_dir = "../../images/";
+        $target_file = $target_dir . $foto;
+        $db_path = $foto;
 
         if (!move_uploaded_file($_FILES["foto"]["tmp_name"], $target_file)) {
             die("Error uploading file.");
         }
 
         $sql = "INSERT INTO cemilan (nama_cemilan, harga_cemilan, stok_cemilan, gambar) 
-                VALUES ('$nama', '$harga', '$stok', '$target_file')";
+                VALUES ('$nama', '$harga', '$stok', '$db_path')";
 
         if (mysqli_query($konek, $sql)) {
             header("location:../Admin_Snack.php?p=Snack_Tambah");

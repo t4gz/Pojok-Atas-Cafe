@@ -82,10 +82,10 @@
                                             <label for="foto" class="form_label">Foto (biarkan kosong jika tidak ingin mengganti) :</label>
                                             <input type="file" class="form-control" id="foto" name="foto" accept="image/*" />
                                             <br />
-                                            <img src="uploads/<?php echo htmlspecialchars($foto); ?>" alt="Foto Minuman" style="width: 200px; height: auto;" />
+                                            <img src="../images/<?php echo htmlspecialchars($foto); ?>" alt="Foto Minuman" style="width: 200px; height: auto;" />
                                         </div>
                                         <button type="submit" class="btn btn-dark text-light">Update</button>
-                                        <a href="../Admin_Snack.php?p=Minuman_EditHapus" class="btn btn-secondary">Batal</a>
+                                        <a href="../Admin_Minuman.php?p=Minuman_EditHapus" class="btn btn-secondary">Batal</a>
                                     </form>
                                 </div>
                             </div>

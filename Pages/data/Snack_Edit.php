@@ -82,7 +82,7 @@
                                             <label for="foto" class="form_label">Foto (biarkan kosong jika tidak ingin mengganti) :</label>
                                             <input type="file" class="form-control" id="foto" name="foto" accept="image/*" />
                                             <br />
-                                            <img src="uploads/<?php echo htmlspecialchars($foto); ?>" alt="Foto Snack" style="width: 200px; height: auto;" />
+                                            <img src="../images/<?php echo htmlspecialchars($foto); ?>" alt="Foto Stack" style="width: 200px; height: auto;" />
                                         </div>
                                         <button type="submit" class="btn btn-dark text-light">Update</button>
                                         <a href="../Admin_Snack.php?p=Snack_EditHapus" class="btn btn-secondary">Batal</a>

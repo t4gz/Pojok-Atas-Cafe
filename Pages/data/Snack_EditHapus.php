@@ -45,7 +45,7 @@
                                     echo "<td width='15%'>$nama</td>";
                                     echo "<td class='text-center' width='12%'>Rp " . number_format($harga, 0, ',', '.') . "</td>";
                                     echo "<td class='text-center' width='12%'>$stok</td>";
-                                    echo "<td class='text-center'><img src='../pages/data/uploads/$foto' style='width: 200px; height: auto;'></td>";
+                                        echo "<td class='text-center'><img src='../images/$foto' style='width: 200px; height: auto;'></td>";    
 
                                     echo "<td class='text-center' width='10%'>";
                                     echo "<a href='data/Snack_Edit.php?id=$id' class='btn btn-sm btn-success'>Edit</a>";
