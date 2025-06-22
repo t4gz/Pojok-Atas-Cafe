@@ -115,6 +115,8 @@ foreach ($_SESSION['cart'] as $type => $items) {
             <div class="col-sm-6 text-start">
                 <div class="total" style="padding-left: 5%;">
                     Total: Rp<?= number_format($totalPrice, 0, ',', '.') ?>
+                    <br></br>
+                    Kurangi jumlah item hingga 0 untuk menghapus
                 </div>
             </div>
             <div class="col-sm-6 text-end">
