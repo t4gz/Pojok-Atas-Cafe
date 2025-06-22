@@ -76,7 +76,7 @@ h3#cemilan {
 .iconkeranjang {
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  right: 15px;
   z-index: 1000;
   display: none;
 }
