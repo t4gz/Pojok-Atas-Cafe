@@ -41,7 +41,8 @@ if (!empty($cartToUse)) {
                 'name' => $name,
                 'price' => $price,
                 'quantity' => $quantity,
-                'subtotal' => $subtotal
+                'subtotal' => $subtotal,
+                'gambar' => $data['gambar'] ?? ''
             ];
         }
     }
@@ -73,7 +74,11 @@ if (!empty($cartToUse)) {
             <?php foreach ($cartItems as $item) : ?>
                 <div class="item-card d-flex justify-content-between align-items-center p-3">
                     <div class="d-flex align-items-center">
-                        <div class="item-image" style="width: 50px; height: 50px; background: #ccc; margin-right: 10px;"></div>
+                        <?php if (!empty($item['gambar'])): ?>
+                            <img src="../images/<?= htmlspecialchars($item['gambar']) ?>" alt="<?= htmlspecialchars($item['name']) ?>" style="width: 50px; height: 50px; object-fit: cover; margin-right: 10px;">
+                        <?php else: ?>
+                            <div class="item-image" style="width: 50px; height: 50px; background: #ccc; margin-right: 10px;"></div>
+                        <?php endif; ?>
                         <div>
                             <h5 class="mb-1"><?= htmlspecialchars($item['name']) ?></h5>
                             <p class="mb-0" style="color:red;">Harga: Rp<?= number_format($item['price'], 0, ',', '.') ?></p>
@@ -94,6 +99,20 @@ if (!empty($cartToUse)) {
             </div>
             <div class="antar-kasir">Antar ke Kasir</div>
         </div>
+    </div>
+
+    <div class="container mt-4">
+        <form method="post" action="process_submit_order.php" class="p-4 border rounded shadow-sm bg-light">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control form-control-lg rounded-3" id="customer_name" name="customer_name" placeholder="Nama Pemesan" required>
+                <label for="customer_name"><i class="bi bi-person-fill me-2"></i>Nama Pemesan</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="number" class="form-control form-control-lg rounded-3" id="table_number" name="table_number" min="1" placeholder="Nomor Meja" required>
+                <label for="table_number"><i class="bi bi-table me-2"></i>Nomor Meja</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg rounded-3 w-100">Kirim Pesanan</button>
+        </form>
     </div>
 </body>
 </html>
