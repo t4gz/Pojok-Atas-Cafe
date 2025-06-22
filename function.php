@@ -61,4 +61,17 @@ function getCemilanById($id){
     return mysqli_fetch_assoc($result);
 }
 
+function getCartTotalItems() {
+    if (!isset($_SESSION)) session_start();
+    $total = 0;
+    if (isset($_SESSION['cart'])) {
+        foreach ($_SESSION['cart'] as $type => $items) {
+            foreach ($items as $qty) {
+                $total += $qty;
+            }
+        }
+    }
+    return $total;
+}
+
 ?>

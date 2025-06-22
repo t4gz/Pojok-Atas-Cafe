@@ -91,10 +91,11 @@ foreach ($_SESSION['cart'] as $type => $items) {
                         <div class="item-image" style="width: 50px; height: 50px; background: #ccc; margin-right: 10px;"></div>
                         <div>
                             <h5 class="mb-1"><?= htmlspecialchars($item['name']) ?></h5>
-                            <p class="mb-0">Stok: <?= htmlspecialchars($item['stock']) ?></p>
                             <p class="mb-0" style="color:red;">Harga: Rp<?= number_format($item['price'], 0, ',', '.') ?></p>
                         </div>
                     </div>
+
+                    <!-- tombol kurang dan tambah -->
                     <div class="quantity-container">
                         <form method="post" action="update_cart.php" class="d-flex align-items-center">
                             <input type="hidden" name="type" value="<?= htmlspecialchars($item['type']) ?>">
