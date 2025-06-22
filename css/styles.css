@@ -11355,33 +11355,4 @@ section#contact form#contactForm :-ms-input-placeholder {
   justify-content: center;
   align-items: center;
 }
-<<<<<<< HEAD
 
-@media (max-width: 576px) {
-=======
-/* @media (max-width: 576px) {
->>>>>>> 7beb0861819b403dae395f135105f74ccb6cc360
-  .btn-add {
-      width: 25px;
-      height: 25px;
-      font-size: 14px;
-  }
-  .menu-item img {
-      width: 50%; 
-  }
-<<<<<<< HEAD
-}
-
-
-
-=======
-} */
-
-/* KERANJANG */
-.iconkeranjang{
-  position: fixed;
-  bottom:55px;
-  right:25px;
-  z-index:1000;
-}
->>>>>>> 7beb0861819b403dae395f135105f74ccb6cc360
