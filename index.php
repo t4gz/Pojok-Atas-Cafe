@@ -1,5 +1,7 @@
 <?php
 require 'function.php';
+session_start();
+$totalCartItems = getCartTotalItems();
 
 $makanan = getAllMakanan("SELECT * FROM makanan");
 $minuman = getAllMinuman("SELECT * FROM minuman");
@@ -60,9 +62,11 @@ $cemilan = getAllCemilan("SELECT * FROM cemilan");
         <!-- KERANJANG -->
         <div class="iconkeranjang" id="iconkeranjang">
             <a href="Pages/Halaman_Keranjang.php">
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="red" class="bi bi-basket2-fill" viewBox="0 0 16 16">
-                    <path d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1"/>
-                </svg>
+                <i class="fas fa-shopping-basket fa-2x" color="red"></i>
+                <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                    <?= $totalCartItems == 0 ? 'style="display:none;"' : '' ?>>
+                    <?= $totalCartItems ?>
+                </span>
             </a>
         </div>
 
@@ -74,12 +78,21 @@ $cemilan = getAllCemilan("SELECT * FROM cemilan");
                         <div class="card shadow-sm h-100">
                             <div class="gambar-container">
                                 <img src="images/<?= htmlspecialchars($mkn["gambar"]); ?>" class="card-img-top" alt="<?= htmlspecialchars($mkn["nama_makanan"]); ?>">
-                                <a class="tombol-plus" href="Pages/Halaman_Keranjang.php?type=makanan&id=<?= urlencode($mkn['id_makanan']); ?>">+</a>
+                                <button type="button" class="tombol-plus btn-add-cart" data-type="makanan" data-id="<?= htmlspecialchars($mkn['id_makanan']) ?>">+</button>
                             </div>
                             <div class="card-body text-center">
                                 <h5 class="card-title"><?= htmlspecialchars($mkn["nama_makanan"]); ?></h5>
                                 <p class="card-text">Rp<?= number_format($mkn["harga_makanan"], 0, ',', '.'); ?></p>
-                                <p class="text-muted">Stok: <?= htmlspecialchars($mkn["stok_makanan"]); ?></p>
+
+                                <!-- Membuat stok tertulis ready ketika stok masih ada dan tertulis tidak ready ketika stok habis -->
+                                <p class="mb-0">
+                                    Stok:
+                                    <?php if ($mkn['stok_makanan'] > 0): ?>
+                                        <span class="badge bg-success">Tersedia</span>
+                                    <?php else: ?>
+                                        <span class="badge bg-danger">Habis</span>
+                                    <?php endif; ?>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -95,12 +108,21 @@ $cemilan = getAllCemilan("SELECT * FROM cemilan");
                         <div class="card shadow-sm h-100">
                             <div class="gambar-container">
                                 <img src="images/<?= htmlspecialchars($mnm["gambar"]); ?>" class="card-img-top" alt="<?= htmlspecialchars($mnm["nama_minuman"]); ?>">
-                                <a class="tombol-plus" href="Pages/Halaman_Keranjang.php?type=minuman&id=<?= urlencode($mnm['id_minuman']); ?>">+</a>
+                                <button type="button" class="tombol-plus btn-add-cart" data-type="minuman" data-id="<?= htmlspecialchars($mnm['id_minuman']) ?>">+</button>
                             </div>
                             <div class="card-body text-center">
                                 <h5 class="card-title"><?= htmlspecialchars($mnm["nama_minuman"]); ?></h5>
                                 <p class="card-text">Rp<?= number_format($mnm["harga_minuman"], 0, ',', '.'); ?></p>
-                                <p class="text-muted">Stok: <?= htmlspecialchars($mnm["stok_minuman"]); ?></p>
+
+                                <!-- Membuat stok tertulis ready ketika stok masih ada dan tertulis tidak ready ketika stok habis -->
+                                <p class="mb-0">
+                                    Stok:
+                                    <?php if ($mnm['stok_minuman'] > 0): ?>
+                                        <span class="badge bg-success">Tersedia</span>
+                                    <?php else: ?>
+                                        <span class="badge bg-danger">Habis</span>
+                                    <?php endif; ?>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -116,12 +138,21 @@ $cemilan = getAllCemilan("SELECT * FROM cemilan");
                         <div class="card shadow-sm h-100">
                             <div class="gambar-container">
                                 <img src="images/<?= htmlspecialchars($cml["gambar"]); ?>" class="card-img-top" alt="<?= htmlspecialchars($cml["nama_cemilan"]); ?>">
-                                <a class="tombol-plus" href="Pages/Halaman_Keranjang.php?type=cemilan&id=<?= urlencode($cml['id_cemilan']); ?>">+</a>
+                                <button type="button" class="tombol-plus btn-add-cart" data-type="cemilan" data-id="<?= htmlspecialchars($cml['id_cemilan']) ?>">+</button>
                             </div>
                             <div class="card-body text-center">
                                 <h5 class="card-title"><?= htmlspecialchars($cml["nama_cemilan"]); ?></h5>
                                 <p class="card-text">Rp<?= number_format($cml["harga_cemilan"], 0, ',', '.'); ?></p>
-                                <p class="text-muted">Stok: <?= htmlspecialchars($cml["stok_cemilan"]); ?></p>
+
+                                <!-- Membuat stok tertulis ready ketika stok masih ada dan tertulis tidak ready ketika stok habis -->
+                                <p class="mb-0">
+                                    Stok:
+                                    <?php if ($cml['stok_cemilan'] > 0): ?>
+                                        <span class="badge bg-success">Tersedia</span>
+                                    <?php else: ?>
+                                        <span class="badge bg-danger">Habis</span>
+                                    <?php endif; ?>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -142,8 +173,24 @@ $cemilan = getAllCemilan("SELECT * FROM cemilan");
                 }
             });
         </script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).on('click', '.btn-add-cart', function(e){
+                e.preventDefault();
+                const type = $(this).data('type');
+                const id   = $(this).data('id');
+                $.post('notifkeranjang.php', { type, id }, function(resp){
+                    if (resp.success) {
+                        $('#cart-count').text(resp.total).show()
+                                        .addClass('badge-pop');
+                        setTimeout(() => $('#cart-count').removeClass('badge-pop'), 300);
+                    }
+                }, 'json');
+            });
+        </script>
 
-       
+
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="js/scripts.js"></script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
