@@ -47,6 +47,29 @@ if (!empty($cartToUse)) {
         }
     }
 }
+
+$orderConfirmed = false;
+$notification = '';
+
+// Show notification only if flash message exists
+if (isset($_SESSION['notification'])) {
+    $notification = $_SESSION['notification'];
+    unset($_SESSION['notification']);
+}
+
+if (isset($_SESSION['current_order_id'])) {
+    $order_id = $_SESSION['current_order_id'];
+    global $db;
+    $query = "SELECT status_pesanan FROM pesanan WHERE id_pesanan = $order_id LIMIT 1";
+    $result = mysqli_query($db, $query);
+    if ($result && mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        if ($row['status_pesanan'] === 'Dikonfirmasi') {
+            $orderConfirmed = true;
+        }
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,6 +91,11 @@ if (!empty($cartToUse)) {
             </a>
             <h1 class="mb-0 display-4 fw-bold">Pesanan Anda</h1>
         </div>
+        <?php if ($notification): ?>
+            <div class="alert alert-info" role="alert">
+                <?= htmlspecialchars($notification) ?>
+            </div>
+        <?php endif; ?>
         <?php if (empty($cartItems)) : ?>
             <p>Keranjang kosong.</p>
         <?php else : ?>
@@ -111,8 +139,17 @@ if (!empty($cartToUse)) {
                 <input type="number" class="form-control form-control-lg rounded-3" id="table_number" name="table_number" min="1" placeholder="Nomor Meja" required>
                 <label for="table_number"><i class="bi bi-table me-2"></i>Nomor Meja</label>
             </div>
+            <div class="form-floating mb-3">
+                <textarea class="form-control rounded-3" id="catatan" name="catatan" placeholder="Catatan (opsional)" style="height: 100px;"></textarea>
+                <label for="catatan"><i class="bi bi-journal-text me-2"></i>Catatan</label>
+            </div>
             <button type="submit" class="btn btn-primary btn-lg rounded-3 w-100">Kirim Pesanan</button>
         </form>
+        <div class="mt-3 text-center">
+            <form method="get" action="Halaman_Bukti.php">
+                <button type="submit" class="btn btn-success btn-lg rounded-3" <?= $orderConfirmed ? '' : 'disabled' ?>>Cetak Bukti</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
