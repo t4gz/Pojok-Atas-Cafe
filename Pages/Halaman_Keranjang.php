@@ -55,7 +55,8 @@ foreach ($_SESSION['cart'] as $type => $items) {
             'price' => $price,
             'stock' => $stock,
             'quantity' => $quantity,
-            'subtotal' => $subtotal
+            'subtotal' => $subtotal,
+            'gambar' => $data['gambar'] ?? ''
         ];
     }
 }
@@ -82,13 +83,25 @@ foreach ($_SESSION['cart'] as $type => $items) {
             <h1 class="mb-0 fw-bold">Keranjang Pesanan</h1>
         </div>
 
+        <?php if (isset($_SESSION['notification'])) : ?>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <?= htmlspecialchars($_SESSION['notification']) ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <?php unset($_SESSION['notification']); ?>
+        <?php endif; ?>
+
         <?php if (empty($cartItems)) : ?>
             <p>Keranjang kosong.</p>
         <?php else : ?>
             <?php foreach ($cartItems as $item) : ?>
                 <div class="item-card d-flex justify-content-between align-items-center p-3">
                     <div class="d-flex align-items-center">
-                        <div class="item-image" style="width: 50px; height: 50px; background: #ccc; margin-right: 10px;"></div>
+                        <?php if (!empty($item['gambar'])): ?>
+                            <img src="../images/<?= htmlspecialchars($item['gambar']) ?>" alt="<?= htmlspecialchars($item['name']) ?>" style="width: 50px; height: 50px; object-fit: cover; margin-right: 10px;">
+                        <?php else: ?>
+                            <div class="item-image" style="width: 50px; height: 50px; background: #ccc; margin-right: 10px;"></div>
+                        <?php endif; ?>
                         <div>
                             <h5 class="mb-1"><?= htmlspecialchars($item['name']) ?></h5>
                             <p class="mb-0" style="color:red;">Harga: Rp<?= number_format($item['price'], 0, ',', '.') ?></p>
@@ -120,7 +133,7 @@ foreach ($_SESSION['cart'] as $type => $items) {
                 </div>
             </div>
             <div class="col-sm-6 text-end">
-                <button class="btn btn-danger rounded-20" onclick="location.href='process_order.php'">Buat Pesanan</button>
+                <button class="btn btn-danger rounded-20" onclick="location.href='Halaman_Pesanan.php'">Buat Pesanan</button>
             </div>
         </div>
     </div>

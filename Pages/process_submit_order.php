@@ -51,22 +51,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Simulasi persetujuan admin (langsung setujui untuk demo)
-    //$approved = true;
+    $approved = true;
 
-    // Simpan data pesanan sebagai pending
-    $_SESSION['pending_order'] = [
-        'customer_name' => $customer_name,
-        'table_number' => $table_number,
-        'order_items' => $_SESSION['cart']
-    ];
+    if ($approved) {
+        // Simpan data pesanan ke session untuk bukti
+        $_SESSION['approved_order'] = [
+            'customer_name' => $customer_name,
+            'table_number' => $table_number,
+            'order_items' => $_SESSION['cart']
+        ];
 
-    // Kosongkan keranjang
-    unset($_SESSION['cart']);
+        // Kosongkan keranjang
+        unset($_SESSION['cart']);
 
-    $_SESSION['notification'] = 'Pesanan Anda telah diajukan dan menunggu persetujuan admin.';
-
-    header('Location: Halaman_Pesanan.php');
-    exit;
+        header('Location: Halaman_Bukti.php');
+        exit;
+    } else {
+        $_SESSION['notification'] = 'Pesanan Anda belum disetujui oleh admin.';
+        header('Location: Halaman_Keranjang.php');
+        exit;
+    }
 } else {
     header('Location: Halaman_Keranjang.php');
     exit;
