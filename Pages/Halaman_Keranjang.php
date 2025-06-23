@@ -94,32 +94,33 @@ foreach ($_SESSION['cart'] as $type => $items) {
         <?php if (empty($cartItems)) : ?>
             <p>Keranjang kosong.</p>
         <?php else : ?>
-            <?php foreach ($cartItems as $item) : ?>
-                <div class="item-card d-flex justify-content-between align-items-center p-3">
-                    <div class="d-flex align-items-center">
-                        <?php if (!empty($item['gambar'])): ?>
-                            <img src="../images/<?= htmlspecialchars($item['gambar']) ?>" alt="<?= htmlspecialchars($item['name']) ?>" style="width: 50px; height: 50px; object-fit: cover; margin-right: 10px;">
-                        <?php else: ?>
-                            <div class="item-image" style="width: 50px; height: 50px; background: #ccc; margin-right: 10px;"></div>
-                        <?php endif; ?>
-                        <div>
-                            <h5 class="mb-1"><?= htmlspecialchars($item['name']) ?></h5>
-                            <p class="mb-0" style="color:red;">Harga: Rp<?= number_format($item['price'], 0, ',', '.') ?></p>
+            <div class="scrollable-items">
+                <?php foreach ($cartItems as $item) : ?>
+                    <div class="item-card d-flex justify-content-between align-items-center p-3">
+                        <div class="d-flex align-items-center">
+                            <?php if (!empty($item['gambar'])): ?>
+                                <img src="../images/<?= htmlspecialchars($item['gambar']) ?>" alt="<?= htmlspecialchars($item['name']) ?>" style="width: 50px; height: 50px; object-fit: cover; margin-right: 10px;">
+                            <?php else: ?>
+                                <div class="item-image" style="width: 50px; height: 50px; background: #ccc; margin-right: 10px;"></div>
+                            <?php endif; ?>
+                            <div>
+                                <h5 class="mb-1"><?= htmlspecialchars($item['name']) ?></h5>
+                                <p class="mb-0" style="color:red;">Harga: Rp<?= number_format($item['price'], 0, ',', '.') ?></p>
+                            </div>
+                        </div>
+                        <!-- tombol kurang dan tambah -->
+                        <div class="quantity-container">
+                            <form method="post" action="update_cart.php" class="d-flex align-items-center">
+                                <input type="hidden" name="type" value="<?= htmlspecialchars($item['type']) ?>">
+                                <input type="hidden" name="id" value="<?= htmlspecialchars($item['id']) ?>">
+                                <button type="submit" name="change" value="-1" class="quantity-btn">-</button>
+                                <input type="number" name="quantity" value="<?= htmlspecialchars($item['quantity']) ?>" min="0" class="quantity-input" readonly>
+                                <button type="submit" name="change" value="1" class="quantity-btn">+</button>
+                            </form>
                         </div>
                     </div>
-
-                    <!-- tombol kurang dan tambah -->
-                    <div class="quantity-container">
-                        <form method="post" action="update_cart.php" class="d-flex align-items-center">
-                            <input type="hidden" name="type" value="<?= htmlspecialchars($item['type']) ?>">
-                            <input type="hidden" name="id" value="<?= htmlspecialchars($item['id']) ?>">
-                            <button type="submit" name="change" value="-1" class="quantity-btn">-</button>
-                            <input type="number" name="quantity" value="<?= htmlspecialchars($item['quantity']) ?>" min="0" class="quantity-input" readonly>
-                            <button type="submit" name="change" value="1" class="quantity-btn">+</button>
-                        </form>
-                    </div>
-                </div>
-            <?php endforeach; ?>
+                <?php endforeach; ?>
+            </div>
         <?php endif; ?>
     </div>
 

@@ -175,7 +175,7 @@ $cemilan = getAllCemilan("SELECT * FROM cemilan");
         </script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
-            // On page load, fetch current cart total count and update notification
+            // notif keranjang
             $(document).ready(function() {
                 $.get('notifkeranjang.php', function(resp) {
                     if (resp.success) {

@@ -112,7 +112,7 @@ $order = $_SESSION['approved_order'];
             <p><strong>Nomor Meja:</strong> <?= htmlspecialchars($order['table_number']) ?></p>
             <p><strong>Tanggal:</strong> <?= date('d-m-Y H:i') ?></p>
         </div>
-        <ul class="list-group mb-3">
+        <ul class="list-group mb-3" style="max-height: 400px; overflow-y: auto;">
             <?php
             $totalPrice = 0;
             foreach ($order['order_items'] as $type => $items) {
@@ -144,6 +144,7 @@ $order = $_SESSION['approved_order'];
             }
             ?>
         </ul>
+        
         <div class="total-price">Total: Rp<?= number_format($totalPrice, 0, ',', '.') ?></div>
         <div class="mt-4 text-center no-print">
             <button class="btn btn-print" onclick="printReceipt()">Cetak Bukti</button>
