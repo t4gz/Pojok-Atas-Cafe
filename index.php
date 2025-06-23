@@ -175,6 +175,21 @@ $cemilan = getAllCemilan("SELECT * FROM cemilan");
         </script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
+            // On page load, fetch current cart total count and update notification
+            $(document).ready(function() {
+                $.get('notifkeranjang.php', function(resp) {
+                    if (resp.success) {
+                        if (resp.total > 0) {
+                            $('#cart-count').text(resp.total).show();
+                            $('#iconkeranjang').show();
+                        } else {
+                            $('#cart-count').hide();
+                            $('#iconkeranjang').hide();
+                        }
+                    }
+                }, 'json');
+            });
+
             $(document).on('click', '.btn-add-cart', function(e){
                 e.preventDefault();
                 const type = $(this).data('type');
