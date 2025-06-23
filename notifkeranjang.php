@@ -4,6 +4,17 @@ require 'function.php';
 
 header('Content-Type: application/json');
 
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    $total = 0;
+    if (isset($_SESSION['cart'])) {
+        foreach ($_SESSION['cart'] as $t => $items) {
+            foreach ($items as $qty) $total += $qty;
+        }
+    }
+    echo json_encode(['success' => true, 'total' => $total]);
+    exit;
+}
+
 $type = $_POST['type'] ?? '';
 $id = (int)($_POST['id'] ?? 0);
 
