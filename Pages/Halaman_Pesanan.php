@@ -119,16 +119,6 @@ if (isset($_SESSION['current_order_id'])) {
             <?php endforeach; ?>
         <?php endif; ?>
     </div>
-
-    <div class="container fixed-bottom py-3 border-top border-3">
-        <div class="text-center">
-            <div class="total">
-                Total: Rp<?= number_format($totalPrice, 0, ',', '.') ?>
-            </div>
-            <div class="antar-kasir">Antar ke Kasir</div>
-        </div>
-    </div>
-
     <div class="container mt-4">
         <form method="post" action="process_submit_order.php" class="p-4 border rounded shadow-sm bg-light">
             <div class="form-floating mb-3">
@@ -141,15 +131,29 @@ if (isset($_SESSION['current_order_id'])) {
             </div>
             <div class="form-floating mb-3">
                 <textarea class="form-control rounded-3" id="catatan" name="catatan" placeholder="Catatan (opsional)" style="height: 100px;"></textarea>
-                <label for="catatan"><i class="bi bi-journal-text me-2"></i>Catatan</label>
+                <label for="catatan"><i class="bi bi-journal-text me-2"></i>Catatan (Opsional)</label>
             </div>
             <button type="submit" class="btn btn-primary btn-lg rounded-3 w-100">Kirim Pesanan</button>
+            <div class="container mt-3 text-center">
+                <div class="row align-items-end">
+                    <div class="col-4 text-start">
+                        <div class="total">
+                            <h5>Total: Rp<?= number_format($totalPrice, 0, ',', '.') ?></h5>
+                        </div>
+                    </div>
+                    <div class="col-4 text-center">
+                        <div class="antar-kasir">
+                            <h5>Antar Bukti Pesanan ke Kasir</h5>
+                        </div>
+                    </div>
+                    <div class="col-4 text-end">
+                        <form method="get" action="Halaman_Bukti.php">
+                            <button type="submit" class="btn btn-success btn-lg rounded-3" <?= $orderConfirmed ? '' : 'disabled' ?>>Cetak Bukti Pesanan</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </form>
-        <div class="mt-3 text-center">
-            <form method="get" action="Halaman_Bukti.php">
-                <button type="submit" class="btn btn-success btn-lg rounded-3" <?= $orderConfirmed ? '' : 'disabled' ?>>Cetak Bukti</button>
-            </form>
-        </div>
     </div>
 </body>
 </html>
