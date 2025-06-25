@@ -141,19 +141,34 @@ if (isset($_SESSION['current_order_id'])) {
                             <h5>Total: Rp<?= number_format($totalPrice, 0, ',', '.') ?></h5>
                         </div>
                     </div>
-                    <div class="col-4 text-center">
+                    <div class="col-8 text-center">
                         <div class="antar-kasir">
                             <h5>Antar Bukti Pesanan ke Kasir</h5>
                         </div>
                     </div>
-                    <div class="col-4 text-end">
-                        <form method="get" action="Halaman_Bukti.php">
-                            <button type="submit" class="btn btn-success btn-lg rounded-3" <?= $orderConfirmed ? '' : 'disabled' ?>>Cetak Bukti Pesanan</button>
-                        </form>
-                    </div>
+                    
                 </div>
             </div>
         </form>
-    </div>
+                
+        <div class="container mt-3 pt-1" style="text-align: center;">
+            <div class="col-6 mx-auto">
+                <form method="get" action="Halaman_Bukti.php">
+                    <button type="submit" class="btn btn-success btn-lg rounded-3 w-100" id="cetakBuktiBtn" disabled>Cetak Bukti Pesanan</button>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const cetakBtn = document.getElementById('cetakBuktiBtn');
+                const orderConfirmed = <?= json_encode($orderConfirmed) ?>;
+                if (orderConfirmed) {
+                    cetakBtn.disabled = false;
+                } else {
+                    cetakBtn.disabled = true;
+                }
+            });
+        </script>
 </body>
 </html>
